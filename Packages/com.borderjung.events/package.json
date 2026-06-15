@@ -1,0 +1,9 @@
+{
+  "name": "com.borderjung.events",
+  "version": "1.0.0",
+  "displayName": "Border Events",
+  "description": "ScriptableObject-based event channels (Void/Bool/Int/Float/Vector2/String) for decoupled, observer-style design. Raise from one system, listen from another, wire them in the inspector — no hard references. Zero third-party dependencies.",
+  "unity": "2021.3",
+  "keywords": [ "events", "scriptableobject", "observer", "decoupling", "messaging" ],
+  "author": { "name": "BorderJung", "url": "https://github.com/BorderJung" }
+}

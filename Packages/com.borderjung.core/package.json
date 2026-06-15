@@ -1,0 +1,9 @@
+{
+  "name": "com.borderjung.core",
+  "version": "1.0.0",
+  "displayName": "Border Core",
+  "description": "Foundational utilities shared across Border modules: a build-stripped conditional Log, a deterministic xorshift32 RNG, and small dev helpers. Zero third-party dependencies.",
+  "unity": "2021.3",
+  "keywords": [ "core", "utility", "logging", "rng" ],
+  "author": { "name": "BorderJung", "url": "https://github.com/BorderJung" }
+}

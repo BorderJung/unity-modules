@@ -1,0 +1,50 @@
+# ---- Unity generated ----
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# Asset meta data only ignored when the asset itself is ignored
+!/[Aa]ssets/**/*.meta
+
+# Visual Studio / Rider / IDE
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.suo
+*.tmp
+
+# Unity3D generated meta crash
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Gradle cache
+.gradle/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Crashlytics / build reports
+crashlytics-build.properties
+
+# Local secrets (never commit API keys / sheet secrets)
+**/Secret.json
+**/Secret.json.meta

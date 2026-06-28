@@ -217,11 +217,30 @@ Root-package code is **not** auto-meta'd by opening this repo in Unity — Unity
 - Granularity → small, self-contained modules (events / runtime-anchor / pool independent), all inside the one package.
 
 **Done**
-- **Consolidated into a single root package `com.borderjung.unity-modules` v1.0.0** — repo root is the package, `Runtime/Core` + `Runtime/Events` under the single `Border` assembly, all `.meta` committed, non-package material moved to `Dev~/`.
-- Imports via **bare git URL** (`…unity-modules.git`), verified working in the EmptyHouse project.
-- `Border.Core` — `Log`, `DeterministicRng`, `ScreenshotManager`. `Border.Events` — Void/Bool/Int/Float/Vector2/String channels + Fade/FloatingHud.
+- **v1.0.0** — consolidated into a single root package `com.borderjung.unity-modules` (repo root = package; `Runtime/Core` + `Runtime/Events` under the single `Border` assembly; all `.meta` committed; non-package material in `Dev~/`). Bare git URL import verified in EmptyHouse. (Pushed but **not tagged** at the time.)
+- **v1.1.0** (tagged) — folded 4 modules from the Drilling collection: `Border.SaveLoad`, `Border.Localization`, `Border.Settings`, `Border.UI`; editor code → new `Border.Editor` asmdef. Decoupled from the source game via `ILocalizationProvider` (was `Managers.Services.Localization`) and `ISettingsRepository` (was `SaveLoadSystem`/`ProfileSave`). `_Shared` Log/Events duplicates converged into `Border.Core`/`Border.Events`. Added forced `com.unity.ugui` dependency.
+
+**Not folded / pending**
+- **Input** (`InputReader`) — depends on a generated `GameInput` class (from a `.inputactions` asset) that was not collected; including it breaks the whole `Border` assembly. Staged in `Dev~/Input`.
+- **Sample data** — Drilling prefabs / SO / event-channel `.asset` instances stayed in `Dev~/` (they reference `_Shared` GUIDs). Move to `Samples~/` when wiring samples.
+- Old loose staging in `Dev~/` (FSM / SceneManagement / EditorTools / SheetManager) still awaits folding.
 
 **Next actions**
-1. `git tag v1.0.0 && git push --tags` to pin the current working state, then switch consumers to `#v1.0.0`.
-2. Fold the next module from `Dev~/` (or directly from the Drilling project) per **§8A** — bring the metas, place under `Runtime/<Module>/`, decide asmdef, bump to v1.1.0.
-3. Still-loose staging in `Dev~/` (FSM/Input/SaveLoadSystem/SceneManagement/EditorTools) awaits folding (the project's save-load supersedes the old one; FocusManager/DualSense extend input).
+1. Verify v1.1.0 compiles in a consumer (EmptyHouse via `file:` path); it is already tagged `v1.1.0`.
+2. Bring Input's `.inputactions`/`GameInput` to fold `Border.Input`; set up `Samples~/`.
+3. (Optional) backfill a `v1.0.0` tag on commit `09aba00` for clean version history.
+
+---
+
+## 12. Lessons Learned (시행착오 기록)
+
+Concrete gotchas hit while building this package — read so you don't repeat them.
+
+1. **Bare git URL needs `package.json` at the repo root.** Adding `…unity-modules.git` (no `?path`) failed with *"Repository does not contain a package manifest"* until the repo root itself became the package. (Drove the multi-package → single-package pivot.)
+2. **`.meta` must be committed for EVERY file — not just code.** Missing metas in a downloaded (immutable) package produce *"Asset X has no meta file, but it's in an immutable folder. The asset will be ignored."* — for `.cs`/`.asmdef` (→ silently not compiled, **fatal**) AND for folders and `README`/`CHANGELOG`/`LICENSE`/`package.json`/`CLAUDE.md` (→ console warning). **Do not delete doc/json metas to "tidy up" — the warning just comes back.** Root-package code is NOT auto-meta'd by opening this repo (Unity only manages `Assets/` and `Packages/`) → generate via the `file:` workflow (§8B) or by hand (no BOM, unique GUID).
+3. **A stale `packages-lock.json` pins an old commit.** EmptyHouse kept throwing old `?path` "no meta" errors because its lock pinned an old hash and the manifest still had a leftover `com.borderjung.core` entry. Fix: remove the stale manifest + lock entries; changing the `#version` in the URL forces a re-resolve.
+4. **One module referencing an uncollected type breaks the WHOLE assembly.** `InputReader` needs a generated `GameInput` (from `.inputactions`) that wasn't collected → excluded so `Border` keeps compiling. Verify each module is self-contained (no dangling types) **before** folding.
+5. **Decouple from the source game via interfaces, owned by the module.** `Managers.Services.Localization` → static `LocalizationManager.Current` (`ILocalizationProvider`); `SaveLoadSystem`/`ProfileSave` → injected `ISettingsRepository`. The module exposes its own access point; the game implements the interface. **Do not bundle the game's service locator** (`Managers`).
+6. **Bring `.meta` when importing from another project** (GUID preservation) — never regenerate an existing meta (breaks prefab/SO references).
+7. **A single package forces its deps on every consumer** (§5). We chose to declare `com.unity.ugui` (force) for simplicity; the lean alternative is per-module asmdefs + `versionDefines`.
+8. **Tag for stability.** Bare URL pulls the latest `main` (drifts as you push); `#vX.Y.Z` pins a snapshot. Unity also caches the resolved commit in `packages-lock.json` and won't re-pull until you re-resolve.

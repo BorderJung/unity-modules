@@ -3,6 +3,16 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.1.1] - 2026-06-29
+
+### Fixed
+- Compile errors from the v1.1.0 fold (v1.1.0 did not compile):
+  - `UIGenericButton` (`Border.UI`) was missing `using Border.Localization` for its `UILocalizeText` reference (CS0246).
+  - `UILocalizeTextEditor`'s base class `Editor` resolved to the `Border.Localization.Editor` namespace → qualified as `UnityEditor.Editor` (CS0118).
+
+### Added
+- `Samples~/SettingsAndLocalization` — example `SettingsSO`, `LocalizationTable`, event-channel instances (script GUIDs rewired from `_Shared` to `Border.Events`), and Settings panel prefabs. Registered via `package.json` `samples`.
+
 ## [1.1.0] - 2026-06-29
 
 ### Added

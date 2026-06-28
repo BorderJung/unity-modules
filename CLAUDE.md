@@ -129,7 +129,25 @@ unity-modules/                 = the UPM package (repo root)
 - **Bare URL, no `?path=`** — the repo root *is* the package.
 - `#vX.Y.Z` pins by git tag. **Without a tag you pull the latest `main` and builds drift.**
 - **One entry** — the package bundles every module, so there are no internal deps to list.
-- **Local development:** point at the working copy with a `file:` path (mutable — see §8B). Remember to switch back to the git URL + tag before relying on a build.
+- **Local development:** point at the working copy with a `file:` path (mutable — see §8B and the workflow below).
+
+### Dev mode ↔ Release mode (★ workflow)
+
+A consumer's manifest entry has two modes — switch that **one line** between them (it's a value swap, not an added line; only one is active at a time):
+
+| Mode | manifest value | when |
+|---|---|---|
+| **Release** | `…unity-modules.git#vX.Y.Z` | normal use — a fixed, published version |
+| **Dev** | `file:C:/Users/jungs/00_LocalRepo/04_unity-modules` | while editing the package *from* a consuming project |
+
+`file:` points at the working copy, so it is **mutable**: code edits and Unity-generated `.meta` apply on window focus — no push, tag, re-resolve, or `Library` deletion.
+
+**Rule (follow this every time):**
+1. Need to change the package → switch the consumer to **Dev (`file:`)** and iterate.
+2. All changes done → **bump `version`, update `CHANGELOG`, commit, `git tag vX.Y.Z`, push** (tags too).
+3. Switch the consumer **back to Release (`#vX.Y.Z`)**.
+
+Never commit/share a consuming project while it's in Dev mode — `file:` only resolves on your machine.
 
 ---
 

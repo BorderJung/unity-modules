@@ -1,0 +1,9 @@
+{
+  "name": "com.borderjung.unity-modules",
+  "version": "1.0.0",
+  "displayName": "Border Unity Modules",
+  "description": "Reusable Unity modules by BorderJung, bundled as a single package. Includes Core (build-stripped conditional Log, deterministic xorshift32 RNG, dev helpers) and Events (ScriptableObject-based event channels for decoupled, observer-style design). Zero third-party dependencies.",
+  "unity": "2021.3",
+  "keywords": [ "core", "utility", "logging", "rng", "events", "scriptableobject", "observer" ],
+  "author": { "name": "BorderJung", "url": "https://github.com/BorderJung" }
+}

@@ -17,12 +17,12 @@ public class FindMissingScriptsInScene
             {
                 if (components[i] == null)
                 {
-                    Debug.LogWarning($"❗ Missing script in GameObject: '{go.name}'", go);
+                    Log.W($"❗ Missing script in GameObject: '{go.name}'", go);
                     count++;
                 }
             }
         }
 
-        Debug.Log($"🔍 검색 완료: Missing Script {count}개 발견됨");
+        Log.D($"🔍 검색 완료: Missing Script {count}개 발견됨");
     }
 }

@@ -34,7 +34,7 @@ public class TMPFontChangerEditor : Editor
                 textMeshProUi.margin = new Vector4(10, 10, 10, 10);
             }
             
-            Debug.Log("폰트 일괄 변경이 완료되었습니다.");
+            Log.D("폰트 일괄 변경이 완료되었습니다.");
         }
     }
 }

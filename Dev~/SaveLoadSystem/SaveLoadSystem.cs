@@ -5,7 +5,7 @@ using UnityEngine;
 public class SaveLoadSystem : ScriptableObject
 {
     public Save SaveData = new Save();
-    public string SaveFileName = "save.drilling";
+    public string SaveFileName = "save.game";
 
     private void Awake()
     {

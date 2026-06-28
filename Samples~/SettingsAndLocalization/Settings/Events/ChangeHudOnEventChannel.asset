@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b431ac84ea60fd4baf0edb57a4b4955, type: 3}
-  m_Name: CameraShakeEventChannel
+  m_Script: {fileID: 11500000, guid: b2833f4b75e14b58aab82d532609b707, type: 3}
+  m_Name: ChangeHudOnEventChannel
   m_EditorClassIdentifier: 
-  Description: "\uCE74\uBA54\uB77C \uD754\uB4E4\uB9AC \uAC15\uB3C4\uB97C \uC804\uB2EC\uD568\nCameraManager\uAC00
-    \uBC1C\uD589"

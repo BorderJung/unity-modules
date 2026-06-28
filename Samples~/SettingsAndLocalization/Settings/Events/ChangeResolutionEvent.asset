@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac9a18068ddd304ab885179787cc6aa, type: 3}
-  m_Name: SaveSettingsEvent
+  m_Script: {fileID: 11500000, guid: 7d29b559c8874840b14f02f2137b1327, type: 3}
+  m_Name: ChangeResolutionEvent
   m_EditorClassIdentifier: 

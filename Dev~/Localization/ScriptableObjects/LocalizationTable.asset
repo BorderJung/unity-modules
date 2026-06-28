@@ -1,0 +1,1796 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e76559e46b0ab439975c2acac431b2, type: 3}
+  m_Name: LocalizationTable
+  m_EditorClassIdentifier: 
+  entries:
+  - key: COMMON_QUESTION_MARKS
+    translations:
+    - languageCode: en
+      value: ???
+    - languageCode: ja
+      value: ???
+    - languageCode: ko
+      value: ???
+    - languageCode: zh
+      value: ???
+  - key: DEMO_GOOGLEFORM
+    translations:
+    - languageCode: en
+      value: Feedback
+    - languageCode: ja
+      value: "\u30D5\u30A3\u30FC\u30C9\u30D0\u30C3\u30AF"
+    - languageCode: ko
+      value: "\uD53C\uB4DC\uBC31"
+    - languageCode: zh
+      value: "\u53CD\u9988"
+  - key: DEMO_THANKS_BODY
+    translations:
+    - languageCode: en
+      value: 'Thanks for playing Drilling!
+
+
+        This is just a small taste of
+        Drilling. Many more environments and upgrades await in the full game.
+
+
+        See
+        you soon!'
+    - languageCode: ja
+      value: "Drilling\u3092\u30D7\u30EC\u30A4\u3057\u3066\u3044\u305F\u3060\u304D\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\uFF01\n\n\u3053\u3053\u307E\u3067\u306FDrilling\u306E\u307B\u3093\u306E\u4E00\u90E8\u3067\u3059\u3002\n\u88FD\u54C1\u7248\u3067\u306F\u3055\u3089\u306B\u591A\u304F\u306E\u74B0\u5883\u3068\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9\u304C\u3042\u306A\u305F\u3092\u5F85\u3063\u3066\u3044\u307E\u3059\u3002\n\n\u307E\u305F\u304A\u4F1A\u3044\u3057\u307E\u3057\u3087\u3046\uFF01"
+    - languageCode: ko
+      value: "Drilling\uC744 \uD50C\uB808\uC774\uD574 \uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4!\n\n\uC9C0\uAE08\uAE4C\uC9C0\uB294
+        Drilling\uC758 \uC544\uC8FC \uC791\uC740 \uC77C\uBD80\uC600\uC5B4\uC694.\n\uC815\uC2DD
+        \uBC84\uC804\uC5D0\uB294 \uB354 \uB2E4\uC591\uD55C \uD658\uACBD\uACFC \uC5C5\uADF8\uB808\uC774\uB4DC\uAC00
+        \uAE30\uB2E4\uB9AC\uACE0 \uC788\uC2B5\uB2C8\uB2E4.\n\n\uACE7 \uB2E4\uC2DC
+        \uB9CC\uB098\uC694!"
+    - languageCode: zh
+      value: "\u611F\u8C22\u60A8\u6E38\u73A9 Drilling\uFF01\n\n\u8FD9\u53EA\u662F
+        Drilling \u7684\u4E00\u5C0F\u90E8\u5206\u4F53\u9A8C\u3002\u5B8C\u6574\u7248\u4E2D\u8FD8\u6709\u66F4\u591A\u73AF\u5883\u548C\u5347\u7EA7\u5185\u5BB9\u7B49\u60A8\u63A2\u7D22\u3002\n\n\u540E\u4F1A\u6709\u671F\uFF01"
+  - key: DEMO_WISHLIST
+    translations:
+    - languageCode: en
+      value: Wishlist
+    - languageCode: ja
+      value: "\u30A6\u30A3\u30C3\u30B7\u30E5\u30EA\u30B9\u30C8"
+    - languageCode: ko
+      value: "\uC704\uC2DC\uB9AC\uC2A4\uD2B8"
+    - languageCode: zh
+      value: "\u613F\u671B\u6E05\u5355"
+  - key: DLG_CLICK_TO_CONTINUE
+    translations:
+    - languageCode: en
+      value: Click to continue
+    - languageCode: ja
+      value: "\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u7D9A\u3051\u308B"
+    - languageCode: ko
+      value: "\uD074\uB9AD\uD558\uC5EC \uACC4\uC18D"
+    - languageCode: zh
+      value: "\u70B9\u51FB\u7EE7\u7EED"
+  - key: DLG_NPC_CAVE00_DEFAULT
+    translations:
+    - languageCode: en
+      value: ...You have come again, traveler. The three sleeping altars throughout
+        this cave... not all have awakened yet. Offer ore, and activate them.
+    - languageCode: ja
+      value: "\u2026\u307E\u305F\u6765\u305F\u306E\u304B\u3001\u65C5\u4EBA\u3088\u3002\u6D1E\u7A9F\u306E\u5404\u6240\u306B\u7720\u308B\u4E09\u3064\u306E\u796D\u58C7\u2026\u307E\u3060\u3059\u3079\u3066\u306F\u76EE\u899A\u3081\u3066\u3044\u306A\u3044\u3002\u9271\u77F3\u3092\u6367\u3052\u3001\u6D3B\u6027\u5316\u305B\u3088\u3002"
+    - languageCode: ko
+      value: "... \uB610 \uC654\uB294\uAC00, \uC5EC\uD589\uC790\uC5EC. \uB3D9\uAD74
+        \uACF3\uACF3\uC5D0 \uC7A0\uB4E0 \uC81C\uB2E8 \uC14B... \uC544\uC9C1 \uBAA8\uB450
+        \uAE68\uC5B4\uB098\uC9C0 \uBABB\uD588\uB2E4. \uAD11\uC11D\uC744 \uBC14\uCCD0,
+        \uD65C\uC131\uD654\uD558\uB77C."
+    - languageCode: zh
+      value: "\u2026\u53C8\u6765\u4E86\u5417\uFF0C\u65C5\u4EBA\u3002\u6D1E\u7A9F\u5404\u5904\u6C89\u7761\u7684\u4E09\u5EA7\u796D\u575B\u2026\u5C1A\u672A\u5168\u90E8\u82CF\u9192\u3002\u732E\u4E0A\u77FF\u77F3\uFF0C\u5C06\u5176\u6FC0\u6D3B\u3002"
+  - key: DLG_NPC_CAVE00_ENTRANCE
+    translations:
+    - languageCode: en
+      value: Traveler... hear me. Throughout this cave... <color=#D4A05A>three sleeping
+        altars</color> lie. Offer ore, and activate them all. That... is the way
+        to open this cave.
+    - languageCode: ja
+      value: "\u65C5\u4EBA\u3088\u2026\u8033\u3092\u50BE\u3051\u3088\u3002\u3053\u306E\u6D1E\u7A9F\u306E\u5404\u6240\u306B\u2026<color=#D4A05A>\u7720\u308C\u308B\u4E09\u3064\u306E\u796D\u58C7</color>\u304C\u3042\u308B\u3002\u9271\u77F3\u3092\u6367\u3052\u3001\u3059\u3079\u3066\u6D3B\u6027\u5316\u305B\u3088\u3002\u305D\u308C\u304C\u2026\u3053\u306E\u6D1E\u7A9F\u3092\u958B\u304F\u9053\u3060\u3002"
+    - languageCode: ko
+      value: "\uC5EC\uD589\uC790\uC5EC... \uB4E4\uC5B4\uB77C. \uC774 \uB3D9\uAD74
+        \uACF3\uACF3\uC5D0... <color=#D4A05A>\uC7A0\uB4E0 \uC81C\uB2E8 \uC14B</color>\uC774
+        \uC788\uB2E4. \uAD11\uC11D\uC744 \uBC14\uCCD0, \uBAA8\uB450 \uD65C\uC131\uD654\uD558\uB77C.
+        \uADF8\uAC83\uC774... \uC774 \uB3D9\uAD74\uC744 \uC5EC\uB294 \uAE38\uC774\uB2E4."
+    - languageCode: zh
+      value: "\u65C5\u4EBA\u554A\u2026\u4E14\u542C\u4E4B\u3002\u5728\u8FD9\u6D1E\u7A9F\u5404\u5904\u2026<color=#D4A05A>\u6C89\u7761\u7684\u4E09\u5EA7\u796D\u575B</color>\u9759\u5367\u3002\u732E\u4E0A\u77FF\u77F3\uFF0C\u5C06\u5176\u7686\u6FC0\u6D3B\u3002\u6B64\u4E43\u2026\u5F00\u542F\u6B64\u6D1E\u4E4B\u8DEF\u3002"
+  - key: DLG_NPC_CAVE00_STEP_0
+    translations:
+    - languageCode: en
+      value: The traveler's ore... has settled into one altar. Activation begins.
+    - languageCode: ja
+      value: "\u65C5\u4EBA\u306E\u9271\u77F3\u2026\u4E00\u3064\u306E\u796D\u58C7\u306B\u5BBF\u3063\u305F\u3002\u6D3B\u6027\u5316\u304C\u59CB\u307E\u308B\u3002"
+    - languageCode: ko
+      value: "\uC5EC\uD589\uC790\uC758 \uAD11\uC11D... \uC81C\uB2E8 \uD558\uB098\uC5D0
+        \uAE43\uB4E4\uC5C8\uB2E4. \uD65C\uC131\uD654\uAC00 \uC2DC\uC791\uB41C\uB2E4."
+    - languageCode: zh
+      value: "\u65C5\u4EBA\u4E4B\u77FF\u77F3\u2026\u5DF2\u6816\u4E8E\u4E00\u5EA7\u796D\u575B\u3002\u6FC0\u6D3B\u5F00\u59CB\u3002"
+  - key: DLG_NPC_CAVE00_STEP_1
+    translations:
+    - languageCode: en
+      value: The light of the ore... seeps into another altar. Activation continues.
+    - languageCode: ja
+      value: "\u9271\u77F3\u306E\u5149\u304C\u2026\u5225\u306E\u796D\u58C7\u306B\u67D3\u307F\u8FBC\u3080\u3002\u6D3B\u6027\u5316\u304C\u7D9A\u304F\u3002"
+    - languageCode: ko
+      value: "\uAD11\uC11D\uC758 \uBE5B\uC774... \uB610 \uB2E4\uB978 \uC81C\uB2E8\uC5D0
+        \uC2A4\uBA70\uB4E0\uB2E4. \uD65C\uC131\uD654\uAC00 \uC774\uC5B4\uC9C4\uB2E4."
+    - languageCode: zh
+      value: "\u77FF\u77F3\u4E4B\u5149\u2026\u6D78\u5165\u53E6\u4E00\u5EA7\u796D\u575B\u3002\u6FC0\u6D3B\u5EF6\u7EED\u3002"
+  - key: DLG_NPC_CAVE00_STEP_2
+    translations:
+    - languageCode: en
+      value: One sleeping stone... answers the ore. Activation deepens.
+    - languageCode: ja
+      value: "\u7720\u308C\u308B\u77F3\u3072\u3068\u3064\u304C\u2026\u9271\u77F3\u306B\u5FDC\u3048\u308B\u3002\u6D3B\u6027\u5316\u304C\u6DF1\u307E\u308B\u3002"
+    - languageCode: ko
+      value: "\uC7A0\uB4E0 \uB3CC \uD558\uB098\uAC00... \uAD11\uC11D\uC5D0 \uC751\uB2F5\uD55C\uB2E4.
+        \uD65C\uC131\uD654\uAC00 \uAE4A\uC5B4\uC9C4\uB2E4."
+    - languageCode: zh
+      value: "\u4E00\u5757\u6C89\u7761\u4E4B\u77F3\u2026\u56DE\u5E94\u77FF\u77F3\u3002\u6FC0\u6D3B\u52A0\u6DF1\u3002"
+  - key: DLG_NPC_CAVE00_UNLOCK_1
+    translations:
+    - languageCode: en
+      value: <color=#D4A05A>The three altars</color>, all awakened. Through <color=#D4A05A>the
+        ancient device</color>... <color=#9B7BB8>swift passage</color> is now possible.
+    - languageCode: ja
+      value: "<color=#D4A05A>\u4E09\u3064\u306E\u796D\u58C7</color>\u3001\u3059\u3079\u3066\u76EE\u899A\u3081\u305F\u3002<color=#D4A05A>\u53E4\u306E\u88C5\u7F6E</color>\u3092\u7528\u3044\u308C\u3070\u2026<color=#9B7BB8>\u7D20\u65E9\u3044\u79FB\u52D5</color>\u304C\u53EF\u80FD\u3068\u306A\u308B\u3002"
+    - languageCode: ko
+      value: "<color=#D4A05A>\uC14B\uC758 \uC81C\uB2E8</color>, \uBAA8\uB450 \uAE68\uC5B4\uB0AC\uB2E4.
+        <color=#D4A05A>\uACE0\uB300 \uC7A5\uCE58</color>\uB97C \uD65C\uC6A9\uD574...
+        <color=#9B7BB8>\uBE60\uB978 \uC774\uB3D9</color>\uC774 \uAC00\uB2A5\uD558\uB2E4."
+    - languageCode: zh
+      value: "<color=#D4A05A>\u4E09\u5EA7\u796D\u575B</color>\uFF0C\u7686\u5DF2\u82CF\u9192\u3002\u501F<color=#D4A05A>\u53E4\u4EE3\u88C5\u7F6E</color>\u4E4B\u529B\u2026<color=#9B7BB8>\u5FEB\u901F\u79FB\u52A8</color>\u5DF2\u6210\u53EF\u80FD\u3002"
+  - key: DLG_NPC_CAVE00_UNLOCK_2
+    translations:
+    - languageCode: en
+      value: Climb higher. Toward <color=#9B7BB8>the upper layer</color>, advance.
+        There... your path lies.
+    - languageCode: ja
+      value: "\u3055\u3089\u306B\u4E0A\u3078\u6607\u308C\u3002<color=#9B7BB8>\u4E0A\u5C64</color>\u3078\u5411\u304B\u3048\u3002\u305D\u3053\u306B\u2026\u6C5D\u306E\u9053\u304C\u3042\u308B\u3002"
+    - languageCode: ko
+      value: "\uB354 \uC704\uB85C \uC62C\uB77C\uAC00\uB77C. <color=#9B7BB8>\uC0C1\uCE35\uBD80</color>\uB85C
+        \uD5A5\uD574\uB77C. \uADF8\uACF3\uC5D0... \uB108\uC758 \uAE38\uC774 \uC788\uB2E4."
+    - languageCode: zh
+      value: "\u5411\u4E0A\u6500\u767B\u3002\u5411<color=#9B7BB8>\u4E0A\u5C42</color>\u800C\u53BB\u3002\u5F7C\u5904\u2026\u6709\u6C5D\u4E4B\u8DEF\u3002"
+  - key: DLG_NPC_CAVE01_DEFAULT
+    translations:
+    - languageCode: en
+      value: System... err... or... re... boot... ing...
+    - languageCode: ja
+      value: "\u30B7\u30B9\u30C6\u30E0\u2026 \u30A8\u2026 \u30E9\u30FC\u2026 \u518D\u2026
+        \u8D77\u52D5\u2026 \u8A66\u884C\u2026 \u4E2D\u2026"
+    - languageCode: ko
+      value: "\uC2DC\uC2A4\uD15C... \uC624... \uB958... \uC7AC... \uBD80... \uD305...
+        \uC2DC... \uB3C4... \uC911..."
+    - languageCode: zh
+      value: "\u7CFB\u7EDF\u2026\u9519\u2026\u8BEF\u2026\u91CD\u2026\u542F\u2026\u5C1D\u2026\u8BD5\u2026\u4E2D\u2026"
+  - key: DLG_NPC_CAVE01_ENTRANCE
+    translations:
+    - languageCode: en
+      value: Bzzzt... 3 altars... inactive... ore... injection... required...
+    - languageCode: ja
+      value: "\u30C1\u30EA\u30C1\u30EA\u2026 \u30B6\u30B6\u30C3\u2026 \u796D\u58C73\u57FA\u2026
+        \u975E\u6D3B\u6027\u72B6\u614B\u2026 \u9271\u77F3\u2026 \u6CE8\u5165\u2026
+        \u5FC5\u8981\u2026"
+    - languageCode: ko
+      value: "\uCE58\uC775... \uCE59... \uC81C\uB2E8 3\uAE30... \uBE44\uD65C\uC131
+        \uC0C1\uD0DC... \uAD11\uC11D... \uC8FC\uC785... \uD544\uC694..."
+    - languageCode: zh
+      value: "\u6ECB\u6ECB\u2026\u5693\u5693\u2026\u796D\u575B3\u5EA7\u2026\u5904\u4E8E\u975E\u6FC0\u6D3B\u72B6\u6001\u2026\u77FF\u77F3\u2026\u6CE8\u5165\u2026\u5FC5\u8981\u2026"
+  - key: DLG_NPC_CAVE01_STEP_0
+    translations:
+    - languageCode: en
+      value: Altar 1 activation detected... 2 remaining... additional ore injection
+        required...
+    - languageCode: ja
+      value: "\u796D\u58C71\u57FA\u306E\u6D3B\u6027\u5316\u3092\u611F\u77E5\u2026
+        \u6B8B\u308A2\u57FA\u2026 \u8FFD\u52A0\u9271\u77F3\u6CE8\u5165\u304C\u5FC5\u8981\u2026"
+    - languageCode: ko
+      value: "\uC81C\uB2E8 1\uAE30 \uD65C\uC131\uD654 \uAC10\uC9C0... \uC794\uC5EC
+        2\uAE30... \uCD94\uAC00 \uAD11\uC11D \uC8FC\uC785 \uD544\uC694..."
+    - languageCode: zh
+      value: "\u68C0\u6D4B\u52301\u5EA7\u796D\u575B\u6FC0\u6D3B\u2026\u5269\u4F592\u5EA7\u2026\u9700\u989D\u5916\u6CE8\u5165\u77FF\u77F3\u2026"
+  - key: DLG_NPC_CAVE01_STEP_1
+    translations:
+    - languageCode: en
+      value: Altars 2 activated... 1 remaining... system recovery rate increasing...
+    - languageCode: ja
+      value: "\u796D\u58C72\u57FA\u6D3B\u6027\u5316\u2026 \u6B8B\u308A1\u57FA\u2026
+        \u30B7\u30B9\u30C6\u30E0\u5FA9\u65E7\u7387\u4E0A\u6607\u4E2D\u2026"
+    - languageCode: ko
+      value: "\uC81C\uB2E8 2\uAE30 \uD65C\uC131\uD654... \uC794\uC5EC 1\uAE30...
+        \uC2DC\uC2A4\uD15C \uBCF5\uAD6C\uC728 \uC0C1\uC2B9 \uC911..."
+    - languageCode: zh
+      value: "2\u5EA7\u796D\u575B\u6FC0\u6D3B\u2026\u5269\u4F591\u5EA7\u2026\u7CFB\u7EDF\u6062\u590D\u7387\u4E0A\u5347\u4E2D\u2026"
+  - key: DLG_NPC_CAVE01_STEP_2
+    translations:
+    - languageCode: en
+      value: All altars activated. System startup ready.
+    - languageCode: ja
+      value: "\u5168\u796D\u58C7\u6D3B\u6027\u5316\u5B8C\u4E86\u3002\u30B7\u30B9\u30C6\u30E0\u8D77\u52D5\u6E96\u5099\u5B8C\u4E86\u3002"
+    - languageCode: ko
+      value: "\uBAA8\uB4E0 \uC81C\uB2E8 \uD65C\uC131\uD654 \uC644\uB8CC. \uC2DC\uC2A4\uD15C
+        \uAE30\uB3D9 \uC900\uBE44 \uC644\uB8CC."
+    - languageCode: zh
+      value: "\u5168\u90E8\u796D\u575B\u6FC0\u6D3B\u5B8C\u6BD5\u3002\u7CFB\u7EDF\u542F\u52A8\u51C6\u5907\u5C31\u7EEA\u3002"
+  - key: DLG_NPC_CAVE01_UNLOCK
+    translations:
+    - languageCode: en
+      value: System fully operational. All locks disengaged. Proceed upward.
+    - languageCode: ja
+      value: "\u30B7\u30B9\u30C6\u30E0\u5B8C\u5168\u8D77\u52D5\u3002\u5168\u30ED\u30C3\u30AF\u89E3\u9664\u3002\u4E0A\u65B9\u3078\u79FB\u52D5\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+    - languageCode: ko
+      value: "\uC2DC\uC2A4\uD15C \uC644\uC804 \uAE30\uB3D9. \uBAA8\uB4E0 \uC7A0\uAE08\uC774
+        \uD574\uC81C\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uC704\uB97C \uD5A5\uD574 \uC774\uB3D9\uD558\uC2ED\uC2DC\uC624."
+    - languageCode: zh
+      value: "\u7CFB\u7EDF\u5B8C\u5168\u542F\u52A8\u3002\u6240\u6709\u9501\u5B9A\u5DF2\u89E3\u9664\u3002\u8BF7\u5411\u4E0A\u65B9\u79FB\u52A8\u3002"
+  - key: DLG_NPC_CAVE02_DEFAULT
+    translations:
+    - languageCode: en
+      value: ......
+    - languageCode: ja
+      value: "\u2026\u2026"
+    - languageCode: ko
+      value: ......
+    - languageCode: zh
+      value: "\u2026\u2026"
+  - key: DLG_NPC_CAVE02_ENTRANCE
+    translations:
+    - languageCode: en
+      value: Scanning entity... recognition error... records damaged... 3 energy
+        cells... activation required...
+    - languageCode: ja
+      value: "\u500B\u4F53\u30B9\u30AD\u30E3\u30F3\u4E2D\u2026 \u8A8D\u8B58\u30A8\u30E9\u30FC\u2026
+        \u8A18\u9332\u7834\u640D\u2026 \u30A8\u30CD\u30EB\u30AE\u30FC\u30BB\u30EB3\u57FA\u2026
+        \u6D3B\u6027\u5316\u304C\u5FC5\u8981\u2026"
+    - languageCode: ko
+      value: "\uAC1C\uCCB4 \uC2A4\uCE94 \uC911... \uC778\uC2DD \uC624\uB958... \uAE30\uB85D
+        \uD30C\uC190... \uC5D0\uB108\uC9C0 \uC140 3\uAE30... \uD65C\uC131\uD654 \uD544\uC694..."
+    - languageCode: zh
+      value: "\u6B63\u5728\u626B\u63CF\u4E2A\u4F53\u2026\u8BC6\u522B\u9519\u8BEF\u2026\u8BB0\u5F55\u635F\u6BC1\u2026\u80FD\u91CF\u6676\u68383\u5EA7\u2026\u9700\u8981\u6FC0\u6D3B\u2026"
+  - key: DLG_NPC_CAVE02_STEP_0
+    translations:
+    - languageCode: en
+      value: Energy cell 1 activated... 2 remaining... ice wall... melting initiated...
+    - languageCode: ja
+      value: "\u30A8\u30CD\u30EB\u30AE\u30FC\u30BB\u30EB1\u57FA\u6D3B\u6027\u5316\u2026
+        \u6B8B\u308A2\u57FA\u2026 \u6C37\u306E\u58C1\u2026 \u878D\u89E3\u958B\u59CB\u2026"
+    - languageCode: ko
+      value: "\uC5D0\uB108\uC9C0 \uC140 1\uAE30 \uD65C\uC131\uD654... \uC794\uC5EC
+        2\uAE30... \uC5BC\uC74C \uBCBD... \uC735\uD574 \uC2DC\uC791..."
+    - languageCode: zh
+      value: "\u80FD\u91CF\u6676\u68381\u5EA7\u6FC0\u6D3B\u2026\u5269\u4F592\u5EA7\u2026\u51B0\u58C1\u2026\u5F00\u59CB\u878D\u5316\u2026"
+  - key: DLG_NPC_CAVE02_STEP_1
+    translations:
+    - languageCode: en
+      value: Energy cells 2 activated... 1 remaining... nav-logs... partially restored...
+    - languageCode: ja
+      value: "\u30A8\u30CD\u30EB\u30AE\u30FC\u30BB\u30EB2\u57FA\u6D3B\u6027\u5316\u2026
+        \u6B8B\u308A1\u57FA\u2026 \u822A\u6CD5\u8A18\u9332\u2026 \u4E00\u90E8\u5FA9\u65E7\u2026"
+    - languageCode: ko
+      value: "\uC5D0\uB108\uC9C0 \uC140 2\uAE30 \uD65C\uC131\uD654... \uC794\uC5EC
+        1\uAE30... \uD56D\uBC95 \uAE30\uB85D... \uC77C\uBD80 \uBCF5\uAD6C..."
+    - languageCode: zh
+      value: "\u80FD\u91CF\u6676\u68382\u5EA7\u6FC0\u6D3B\u2026\u5269\u4F591\u5EA7\u2026\u822A\u884C\u8BB0\u5F55\u2026\u90E8\u5206\u4FEE\u590D\u2026"
+  - key: DLG_NPC_CAVE02_STEP_2
+    translations:
+    - languageCode: en
+      value: All energy cells activated... core functions restored...
+    - languageCode: ja
+      value: "\u5168\u30A8\u30CD\u30EB\u30AE\u30FC\u30BB\u30EB\u6D3B\u6027\u5316\u5B8C\u4E86\u2026
+        \u57FA\u5E79\u6A5F\u80FD\u5FA9\u65E7\u2026"
+    - languageCode: ko
+      value: "\uBAA8\uB4E0 \uC5D0\uB108\uC9C0 \uC140 \uD65C\uC131\uD654 \uC644\uB8CC...
+        \uD575\uC2EC \uAE30\uB2A5 \uBCF5\uAD6C..."
+    - languageCode: zh
+      value: "\u5168\u90E8\u80FD\u91CF\u6676\u6838\u6FC0\u6D3B\u5B8C\u6BD5\u2026\u6838\u5FC3\u529F\u80FD\u4FEE\u590D\u2026"
+  - key: DLG_NPC_CAVE02_UNLOCK
+    translations:
+    - languageCode: en
+      value: The return route remains. The path is not closed. Head upward. Reach
+        the surface. The moon awaits you.
+    - languageCode: ja
+      value: "\u5E30\u9084\u822A\u8DEF\u306F\u6B8B\u3063\u3066\u3044\u308B\u3002\u9053\u306F\u9589\u3056\u3055\u308C\u3066\u3044\u306A\u3044\u3002\u4E0A\u3092\u5411\u3051\u3002\u5730\u4E0A\u306B\u5230\u9054\u305B\u3088\u3002\u6708\u306F\u304A\u524D\u3092\u5F85\u3063\u3066\u3044\u308B\u3002"
+    - languageCode: ko
+      value: "\uADC0\uD658 \uD56D\uB85C\uB294 \uB0A8\uC544 \uC788\uB2E4. \uAE38\uC740
+        \uB2EB\uD788\uC9C0 \uC54A\uC558\uB2E4. \uC704\uB97C \uD5A5\uD574\uB77C. \uC9C0\uC0C1\uC5D0
+        \uB3C4\uB2EC\uD558\uB77C. \uB2EC\uC740 \uB108\uB97C \uAE30\uB2E4\uB9AC\uACE0
+        \uC788\uB2E4."
+    - languageCode: zh
+      value: "\u5F52\u822A\u4E4B\u8DEF\u4ECD\u5728\u3002\u9053\u8DEF\u672A\u88AB\u5C01\u95ED\u3002\u5411\u4E0A\u5427\u3002\u62B5\u8FBE\u5730\u9762\u3002\u6708\u4EAE\u2026\u6B63\u5728\u7B49\u4F60\u3002"
+  - key: DLG_NPC_CROW_DEFAULT0
+    translations:
+    - languageCode: en
+      value: Hey, you came. How was today? ...Tell me if anything was rough. I will
+        sweep it all away with one flap of my wings. Hah.
+    - languageCode: ja
+      value: "\u3088\u3001\u6765\u305F\u306D\u3002 \u4ECA\u65E5\u306F\u3069\u3046\u3060\u3063\u305F\uFF1F
+        \u2026\u3064\u3089\u3044\u3053\u3068\u3042\u3063\u305F\u3089\u8A00\u3063\u3066\u3002
+        \u79C1\u304C\u7FBD\u3070\u305F\u304D\u4E00\u767A\u3067\u5168\u90E8\u5439\u304D\u98DB\u3070\u3057\u3066\u3042\u3052\u308B\u3002
+        \u3084\u3063\u3002"
+    - languageCode: ko
+      value: "\uC5B4\uC774, \uC654\uC5B4. \uC624\uB298\uC740 \uC880 \uC5B4\uB560\uC5B4?
+        ...\uD798\uB4E0 \uC77C \uC788\uC5C8\uC73C\uBA74 \uB9D0\uD574. \uB0B4\uAC00
+        \uB0A0\uAC1C\uC9D3 \uD55C \uBC88\uC5D0 \uB2E4 \uB0A0\uB824\uC904\uAC8C. \uC58D."
+    - languageCode: zh
+      value: "\u54DF\uFF0C\u4F60\u6765\u5566\u3002 \u4ECA\u5929\u600E\u4E48\u6837\uFF1F
+        \u2026\u6709\u96BE\u8FC7\u7684\u4E8B\u5C31\u8BF4\u3002 \u6211\u4E00\u6247\u7FC5\u8180\u5168\u5E2E\u4F60\u5439\u8D70\u3002
+        \u5440\u3002"
+  - key: DLG_NPC_CROW_DEFAULT1
+    translations:
+    - languageCode: en
+      value: Being alone used to feel kind of off. ...But now I have a friend, so
+        it is fine. Hmph.
+    - languageCode: ja
+      value: "\u524D\u306F\u4E00\u4EBA\u3060\u3068\u3001\u3061\u3087\u3063\u3068\u3042\u308C\u3060\u3063\u305F\u306E\u3002
+        \u2026\u3067\u3082\u4ECA\u306F\u53CB\u9054\u3044\u308B\u304B\u3089\u3001\u5E73\u6C17\u3002
+        \u3075\u3093\u3002"
+    - languageCode: ko
+      value: "\uC804\uC5D0\uB294 \uD63C\uC790 \uC788\uC744 \uB54C \uC880 \uBCC4\uB85C\uC600\uAC70\uB4E0.
+        ...\uADFC\uB370 \uC9C0\uAE08\uC740 \uCE5C\uAD6C \uC788\uC73C\uB2C8\uAE4C,
+        \uAD1C\uCC2E\uC544. \uD5F7."
+    - languageCode: zh
+      value: "\u4EE5\u524D\u4E00\u4E2A\u4EBA\u7684\u65F6\u5019\uFF0C\u6709\u70B9\u4E0D\u592A\u597D\u3002
+        \u2026\u4E0D\u8FC7\u73B0\u5728\u6709\u670B\u53CB\u4E86\uFF0C\u6CA1\u4E8B\u5566\u3002
+        \u54FC\u3002"
+  - key: DLG_NPC_CROW_DEFAULT2
+    translations:
+    - languageCode: en
+      value: ...Sometimes I want to fly again. You are heading up to the surface,
+        I hear. If you go, take me too. I want to see the sky one more time.
+    - languageCode: ja
+      value: "\u2026\u305F\u307E\u306B\u3001\u307E\u305F\u98DB\u3073\u305F\u304F\u306A\u308B\u6642\u304C\u3042\u308B\u306E\u3002
+        \u3042\u3093\u305F\u3001\u5730\u4E0A\u306B\u51FA\u308B\u3093\u3067\u3057\u3087\u3002
+        \u884C\u304F\u306A\u3089\u79C1\u3082\u9023\u308C\u3066\u3044\u3063\u3066\u3002
+        \u3082\u3046\u4E00\u5EA6\u3001\u7A7A\u3092\u898B\u305F\u3044\u304B\u3089\u3002"
+    - languageCode: ko
+      value: "...\uAC00\uB054 \uB2E4\uC2DC \uB0A0\uACE0 \uC2F6\uC744 \uB54C \uC788\uC5B4.
+        \uB108 \uC9C0\uC0C1 \uAC00\uB294 \uAC70\uB77C\uBA70. \uB098\uAC00\uAC8C \uB418\uBA74,
+        \uB098\uB3C4 \uB370\uB824\uAC00. \uD55C \uBC88 \uB354 \uD558\uB298 \uBCF4\uACE0
+        \uC2F6\uC5B4\uC11C."
+    - languageCode: zh
+      value: "\u2026\u5076\u5C14\u4F1A\u60F3\u518D\u98DE\u4E00\u6B21\u3002 \u542C\u8BF4\u4F60\u8981\u53BB\u5730\u4E0A\u5427\u3002
+        \u51FA\u53BB\u7684\u8BDD\uFF0C\u4E5F\u5E26\u4E0A\u6211\u3002 \u60F3\u518D\u770B\u4E00\u6B21\u5929\u7A7A\u5462\u3002"
+  - key: DLG_NPC_CROW_FIND0_1
+    translations:
+    - languageCode: en
+      value: ...What, you again? How did you even find me? ...Do not come looking.
+    - languageCode: ja
+      value: "\u2026\u306A\u306B\u3001\u307E\u305F\u541B\uFF1F \u3069\u3046\u3084\u3063\u3066\u898B\u3064\u3051\u3066\u304D\u305F\u306E\u3088\u3002
+        \u2026\u63A2\u3055\u306A\u3044\u3067\u3002"
+    - languageCode: ko
+      value: "...\uBB50\uC57C, \uB610 \uB108\uC57C? \uC5B4\uB5BB\uAC8C \uC54C\uACE0
+        \uCC3E\uC544\uC654\uB294\uB370. ...\uCC3E\uC9C0 \uB9C8."
+    - languageCode: zh
+      value: "\u2026\u5E72\u561B\uFF0C\u53C8\u662F\u4F60\uFF1F \u4F60\u600E\u4E48\u627E\u8FC7\u6765\u7684\u3002
+        \u2026\u522B\u6765\u627E\u6211\u3002"
+  - key: DLG_NPC_CROW_FIND0_2
+    translations:
+    - languageCode: en
+      value: (Ran off somewhere again.)
+    - languageCode: ja
+      value: "(\u518D\u3073\u3069\u3053\u304B\u3078\u9003\u3052\u3066\u884C\u3063\u305F\u3002)"
+    - languageCode: ko
+      value: "(\uB2E4\uC2DC \uC5B4\uB514\uB860\uAC00 \uB3C4\uB9DD\uCCE4\uB2E4.)"
+    - languageCode: zh
+      value: "(\u53C8\u9003\u5230\u4E0D\u77E5\u4F55\u5904\u53BB\u4E86\u3002)"
+  - key: DLG_NPC_CROW_FIND1_1
+    translations:
+    - languageCode: en
+      value: ...Really, again? You are kind of scary, you know. Why come over with
+        no business?
+    - languageCode: ja
+      value: "\u2026\u307B\u3093\u3068\u306B\uFF1F \u307E\u305F\uFF1F \u3042\u3093\u305F\u3061\u3087\u3063\u3068\u6016\u3044\u3093\u3060\u3051\u3069\u3002
+        \u7528\u3082\u306A\u3044\u306E\u306B\u306A\u3093\u3067\u6765\u308B\u306E\u3002"
+    - languageCode: ko
+      value: "...\uC9C4\uC9DC \uB610\uC57C? \uB108 \uC880 \uBB34\uC12D\uC796\uC544.
+        \uC6A9\uAC74\uB3C4 \uC5C6\uC73C\uBA74\uC11C \uC65C \uC624\uB294\uB370."
+    - languageCode: zh
+      value: "\u2026\u771F\u7684\u5417\uFF1F \u53C8\u6765\uFF1F \u4F60\u6709\u70B9\u5413\u4EBA\u8036\u3002
+        \u6CA1\u4E8B\u6765\u5E72\u561B\u3002"
+  - key: DLG_NPC_CROW_FIND1_2
+    translations:
+    - languageCode: en
+      value: (Ran off somewhere again.)
+    - languageCode: ja
+      value: "(\u518D\u3073\u3069\u3053\u304B\u3078\u9003\u3052\u3066\u884C\u3063\u305F\u3002)"
+    - languageCode: ko
+      value: "(\uB2E4\uC2DC \uC5B4\uB514\uB860\uAC00 \uB3C4\uB9DD\uCCE4\uB2E4.)"
+    - languageCode: zh
+      value: "(\u53C8\u9003\u5230\u4E0D\u77E5\u4F55\u5904\u53BB\u4E86\u3002)"
+  - key: DLG_NPC_CROW_FIND2
+    translations:
+    - languageCode: en
+      value: ...Hmph. Third time. No one has ever come this much to find me. ...You
+        would not... want to be friends, would you? ...Hmph. If you really mean it,
+        come back to where we first met.
+    - languageCode: ja
+      value: "\u2026\u3075\u3093\u3002 \u4E09\u5EA6\u76EE\u306D\u3002 \u3053\u3093\u306A\u306B\u63A2\u3057\u306B\u6765\u3089\u308C\u305F\u306E\u3001\u521D\u3081\u3066\u306A\u3093\u3060\u3051\u3069\u3002
+        \u2026\u3082\u3057\u304B\u3057\u3066\u3001\u53CB\u9054\u306B\u306A\u308A\u305F\u3044\u306E\uFF1F
+        \u2026\u3075\u3093\u3002 \u672C\u6C17\u306A\u3089\u3001\u6700\u521D\u306B\u4F1A\u3063\u305F\u5834\u6240\u3078\u307E\u305F\u6765\u3066\u3002"
+    - languageCode: ko
+      value: "...\uD760. \uC138 \uBC88\uC9F8\uB124. \uC774\uB807\uAC8C\uAE4C\uC9C0
+        \uCC3E\uC544\uC624\uB294 \uAC70, \uCC98\uC74C\uC778\uB370. ...\uB108 \uD639\uC2DC,
+        \uCE5C\uAD6C \uD558\uACE0 \uC2F6\uC740 \uAC70\uC57C? ...\uD5F7. \uC9C4\uC9DC\uB77C\uBA74,
+        \uCC98\uC74C \uBD24\uB358 \uADF8 \uC790\uB9AC\uB85C \uB2E4\uC2DC \uC640."
+    - languageCode: zh
+      value: "\u2026\u54FC\u3002 \u7B2C\u4E09\u6B21\u4E86\u3002 \u6CA1\u4EBA\u8FD9\u6837\u627E\u8FC7\u6211\u5462\u3002
+        \u2026\u4F60\u8BE5\u4E0D\u4F1A\u2026 \u60F3\u505A\u670B\u53CB\u5427\uFF1F
+        \u2026\u54FC\u3002 \u771F\u5FC3\u7684\u8BDD\uFF0C\u5230\u7B2C\u4E00\u6B21\u89C1\u9762\u90A3\u4E2A\u5730\u65B9\u6765\u3002"
+  - key: DLG_NPC_CROW_HAPPY
+    translations:
+    - languageCode: en
+      value: "Oh, you actually came back. ...Honestly, this is a first. Having a
+        friend. Hmph, kind of nice. Take this, for the occasion. It is the real thing
+        \u2014 only for you."
+    - languageCode: ja
+      value: "\u304A\u3001\u307B\u3093\u3068\u306B\u623B\u3063\u3066\u304D\u305F\u3002
+        \u2026\u6B63\u76F4\u3001\u521D\u3081\u3066\u306A\u306E\u3002 \u53CB\u9054\u304C\u3067\u304D\u308B\u3063\u3066\u3002
+        \u3075\u3093\u3001\u3061\u3087\u3063\u3068\u3044\u3044\u6C17\u5206\u3002
+        \u8A18\u5FF5\u306B\u3053\u308C\u3001\u53D7\u3051\u53D6\u3063\u3066\u3002
+        \u672C\u7269\u3060\u3088\u3001\u3042\u3093\u305F\u306B\u3060\u3051\u306D\u3002"
+    - languageCode: ko
+      value: "\uC624, \uC9C4\uC9DC \uB2E4\uC2DC \uC654\uB124. ...\uC194\uC9C1\uD788,
+        \uCC98\uC74C\uC774\uC57C. \uCE5C\uAD6C \uC0DD\uAE34 \uAC70. \uD5F7, \uAE30\uBD84
+        \uC88B\uC740\uB370? \uAE30\uB150\uC73C\uB85C \uC774\uAC70 \uBC1B\uC544. \uC9C4\uD488\uC778\uB370,
+        \uB108\uD55C\uD14C\uB9CC."
+    - languageCode: zh
+      value: "\u54E6\uFF0C\u4F60\u771F\u7684\u56DE\u6765\u4E86\u3002 \u2026\u8BF4\u5B9E\u8BDD\uFF0C\u8FD9\u662F\u5934\u4E00\u6B21\u3002
+        \u6709\u670B\u53CB\u8FD9\u79CD\u4E8B\u3002 \u54FC\uFF0C\u611F\u89C9\u8FD8\u4E0D\u9519\u3002
+        \u7EAA\u5FF5\u4E00\u4E0B\uFF0C\u8FD9\u4E2A\u7ED9\u4F60\u3002 \u662F\u771F\u54C1\u54E6\uFF0C\u53EA\u7ED9\u4F60\u7684\u3002"
+  - key: DLG_NPC_CROW_TALK0_1
+    translations:
+    - languageCode: en
+      value: ...What is it, you? ...Do not stare. ...Hmph, fine, I will not look.
+    - languageCode: ja
+      value: "\u2026\u306A\u306B\u3001\u3042\u3093\u305F\uFF1F \u2026\u3058\u3063\u3068\u898B\u306A\u3044\u3067\u3002
+        \u2026\u3075\u3093\u3001\u898B\u306A\u3044\u898B\u306A\u3044\u3002"
+    - languageCode: ko
+      value: "...\uC65C \uADF8\uB7EC\uB294\uB370, \uB108? ...\uBE64\uD788 \uBCF4\uC9C0
+        \uB9C8. ...\uD5F7, \uC548 \uBD10, \uC548 \uBD10."
+    - languageCode: zh
+      value: "\u2026\u5E72\u561B\u554A\uFF0C\u4F60\uFF1F \u2026\u522B\u76EF\u7740\u6211\u770B\u3002
+        \u2026\u54FC\uFF0C\u4E0D\u770B\u4E86\u4E0D\u770B\u4E86\u3002"
+  - key: DLG_NPC_CROW_TALK0_2
+    translations:
+    - languageCode: en
+      value: (Ran off somewhere.)
+    - languageCode: ja
+      value: "(\u3069\u3053\u304B\u3078\u9003\u3052\u3066\u884C\u3063\u305F\u3002)"
+    - languageCode: ko
+      value: "(\uC5B4\uB514\uB860\uAC00 \uB3C4\uB9DD\uCCE4\uB2E4.)"
+    - languageCode: zh
+      value: "(\u9003\u5230\u4E0D\u77E5\u4F55\u5904\u53BB\u4E86\u3002)"
+  - key: DLG_NPC_GEMEYE_DEFAULT0
+    translations:
+    - languageCode: en
+      value: The current continues.
+    - languageCode: ja
+      value: "\u6D41\u308C\u306F\u7D9A\u304F\u3002"
+    - languageCode: ko
+      value: "\uD750\uB984\uC740 \uACC4\uC18D\uB41C\uB2E4."
+    - languageCode: zh
+      value: "\u6C34\u6D41\u4E0D\u606F\u3002"
+  - key: DLG_NPC_GEMEYE_DEFAULT1
+    translations:
+    - languageCode: en
+      value: The grain of stars glimmers.
+    - languageCode: ja
+      value: "\u661F\u306E\u7D50\u304C\u8F1D\u304F\u3002"
+    - languageCode: ko
+      value: "\uBCC4\uC758 \uACB0\uC774 \uBE5B\uB09C\uB2E4."
+    - languageCode: zh
+      value: "\u661F\u4E4B\u7EB9\u7406\u95EA\u70C1\u3002"
+  - key: DLG_NPC_GEMEYE_DEFAULT2
+    translations:
+    - languageCode: en
+      value: Beyond the sunken sight... you linger.
+    - languageCode: ja
+      value: "\u6C88\u3093\u3060\u8996\u91CE\u306E\u5411\u3053\u3046\u3067\u2026
+        \u541B\u306F\u7559\u307E\u308B\u3002"
+    - languageCode: ko
+      value: "\uC7A0\uAE34 \uC2DC\uC57C \uB108\uBA38... \uADF8\uB300\uB294 \uBA38\uBB34\uB978\uB2E4."
+    - languageCode: zh
+      value: "\u6C89\u6CA6\u7684\u89C6\u91CE\u4E4B\u5916\u2026 \u4F60\u4ECD\u505C\u7559\u3002"
+  - key: DLG_NPC_GEMEYE_PAY0
+    translations:
+    - languageCode: en
+      value: ...The light has touched. The current moves again.
+    - languageCode: ja
+      value: "\u2026\u5149\u304C\u89E6\u308C\u305F\u3002 \u6D41\u308C\u304C\u307E\u305F\u52D5\u304F\u3002"
+    - languageCode: ko
+      value: "...\uBE5B\uC774 \uB2FF\uC558\uB2E4. \uD750\uB984\uC774 \uB2E4\uC2DC
+        \uC6C0\uC9C1\uC778\uB2E4."
+    - languageCode: zh
+      value: "\u2026\u5149\u5DF2\u89E6\u53CA\u3002 \u6C34\u6D41\u518D\u5EA6\u6D41\u52A8\u3002"
+  - key: DLG_NPC_GEMEYE_PAY0_LACK
+    translations:
+    - languageCode: en
+      value: The crystal is yet empty. The current stays still.
+    - languageCode: ja
+      value: "\u7D50\u6676\u306F\u307E\u3060\u7A7A\u3060\u3002 \u6D41\u308C\u306F\u6B62\u307E\u3063\u3066\u3044\u308B\u3002"
+    - languageCode: ko
+      value: "\uACB0\uC815\uC774 \uC544\uC9C1 \uBE44\uC5B4 \uC788\uB2E4. \uD750\uB984\uC774
+        \uBA48\uCDB0 \uC788\uB2E4."
+    - languageCode: zh
+      value: "\u7ED3\u6676\u4ECD\u7136\u7A7A\u7740\u3002 \u6C34\u6D41\u505C\u4E0B\u3002"
+  - key: DLG_NPC_GEMEYE_PAY1
+    translations:
+    - languageCode: en
+      value: The current does not stop, by nature. Your path... has a place to reach.
+    - languageCode: ja
+      value: "\u6D41\u308C\u306F\u672C\u6765\u6B62\u307E\u3089\u306A\u3044\u3002
+        \u541B\u306E\u9053\u306B\u3082\u2026 \u81F3\u308B\u5834\u6240\u304C\u3042\u308B\u3002"
+    - languageCode: ko
+      value: "\uD750\uB984\uC740 \uBCF8\uB514 \uBA48\uCD94\uC9C0 \uC54A\uB294\uB2E4.
+        \uADF8\uB300\uC758 \uAE38\uB3C4... \uB2FF\uC744 \uACF3\uC774 \uC788\uB2E4."
+    - languageCode: zh
+      value: "\u6C34\u6D41\u672C\u4E0D\u505C\u6B47\u3002 \u4F60\u7684\u9053\u8DEF\u2026
+        \u4E5F\u6709\u5F52\u5904\u3002"
+  - key: DLG_NPC_GEMEYE_PAY1_LACK
+    translations:
+    - languageCode: en
+      value: The light still falls short. It is a time to remain.
+    - languageCode: ja
+      value: "\u5149\u306F\u307E\u3060\u8DB3\u308A\u306A\u3044\u3002 \u7559\u307E\u308B\u3079\u304D\u6642\u3060\u3002"
+    - languageCode: ko
+      value: "\uBE5B\uC740 \uC544\uC9C1 \uBD80\uC871\uD558\uB2E4. \uBA38\uBB34\uB97C
+        \uC2DC\uAC04\uC774\uB2E4."
+    - languageCode: zh
+      value: "\u5149\u4ECD\u4E0D\u8DB3\u3002 \u662F\u505C\u7559\u4E4B\u65F6\u3002"
+  - key: DLG_NPC_GEMEYE_TALK0
+    translations:
+    - languageCode: en
+      value: You... are not of this place. I have been sleeping. My strength is yet
+        wanting. Gather stardust, that I may recover.
+    - languageCode: ja
+      value: "\u541B\u306F\u2026 \u3053\u306E\u5730\u306E\u8005\u3067\u306F\u306A\u3044\u306A\u3002
+        \u79C1\u306F\u7720\u3063\u3066\u3044\u305F\u3002 \u307E\u3060\u529B\u304C\u8DB3\u308A\u306C\u3002
+        \u79C1\u304C\u529B\u3092\u53D6\u308A\u623B\u305B\u308B\u3088\u3046\u3001\u661F\u5C51\u3092\u96C6\u3081\u3066\u304F\u308C\u3002"
+    - languageCode: ko
+      value: "\uADF8\uB300... \uC774\uACF3\uC758 \uC874\uC7AC\uAC00 \uC544\uB2C8\uAD70.
+        \uB098\uB294 \uC7A0\uB4E4\uC5B4 \uC788\uC5C8\uB2E4. \uC544\uC9C1 \uD798\uC774
+        \uBD80\uC871\uD558\uB2E4. \uB0B4\uAC00 \uD798\uC744 \uD68C\uBCF5\uD560 \uC218
+        \uC788\uAC8C \uBCC4\uAC00\uB8E8\uB97C \uAD6C\uD574\uB2E4\uC624"
+    - languageCode: zh
+      value: "\u4F60\u2026 \u5E76\u975E\u6B64\u5730\u4E4B\u7269\u3002 \u6211\u66FE\u6C89\u7761\u3002
+        \u529B\u91CF\u5C1A\u6709\u4E0D\u8DB3\u3002 \u66FF\u6211\u6536\u96C6\u661F\u5C51\uFF0C\u8BA9\u6211\u5F97\u4EE5\u6062\u590D\u3002"
+  - key: DLG_NPC_GEMEYE_TALK1
+    translations:
+    - languageCode: en
+      value: The grain of stars flows. ...And you, too?
+    - languageCode: ja
+      value: "\u661F\u306E\u7D50\u304C\u6D41\u308C\u308B\u3002 \u2026\u541B\u3082\u307E\u305F\u3001\u305D\u3046\u304B\u3002"
+    - languageCode: ko
+      value: "\uBCC4\uC758 \uACB0\uC774 \uD750\uB978\uB2E4. ...\uADF8\uB300\uB3C4,
+        \uADF8\uB7EC\uD55C\uAC00."
+    - languageCode: zh
+      value: "\u661F\u4E4B\u7EB9\u7406\u6D41\u52A8\u3002 \u2026\u4F60\u4E5F\u662F\u5417\u3002"
+  - key: DLG_NPC_MOLE_DEFAULT0
+    translations:
+    - languageCode: en
+      value: Hehe, with my vein all sparkly, I feel grand!
+    - languageCode: ja
+      value: "\u3048\u3078\u3078\u3001\u9271\u8108\u304C\u304D\u3089\u304D\u3089\u3057\u3066\u3044\u3066\u6C17\u5206\u304C\u3044\u3044\u3067\u3059\u306D\uFF01"
+    - languageCode: ko
+      value: "\uD5E4\uD5F7, \uAD11\uB9E5\uC774 \uBC18\uC9DD\uBC18\uC9DD\uD558\uB2C8
+        \uAE30\uBD84\uC774 \uC88B\uB124\uC694!"
+    - languageCode: zh
+      value: "\u563F\u563F\uFF0C\u77FF\u8109\u95EA\u95EA\u53D1\u4EAE\uFF0C\u5FC3\u60C5\u771F\u597D\u5440\uFF01"
+  - key: DLG_NPC_MOLE_DEFAULT1
+    translations:
+    - languageCode: en
+      value: Today I dug up some good stones from the cave. Nice and solid, just
+        how I like.
+    - languageCode: ja
+      value: "\u4ECA\u65E5\u306F\u6D1E\u7A9F\u3067\u3044\u3044\u77F3\u304C\u63A1\u308C\u305F\u3093\u3067\u3059\u3088\u3002\u3057\u3063\u304B\u308A\u3057\u3066\u3066\u597D\u304D\u3067\u3059\u3002"
+    - languageCode: ko
+      value: "\uC624\uB298\uC740 \uAD74\uC5D0\uC11C \uC88B\uC740 \uB3CC\uC744 \uCEA4\uC5B4\uC694.
+        \uB2E8\uB2E8\uD574\uC11C \uCC38 \uC88B\uC544\uC694."
+    - languageCode: zh
+      value: "\u4ECA\u5929\u5728\u6D1E\u7A9F\u91CC\u6316\u5230\u4E86\u4E0D\u9519\u7684\u77F3\u5934\u5462\u3002\u7ED3\u5B9E\uFF0C\u6211\u559C\u6B22\u3002"
+  - key: DLG_NPC_MOLE_DEFAULT2
+    translations:
+    - languageCode: en
+      value: Digging in the ground and finding pretty ores really is the most joyful
+        thing. Hehe.
+    - languageCode: ja
+      value: "\u571F\u3092\u6398\u3063\u3066\u7DBA\u9E97\u306A\u9271\u77F3\u3092\u898B\u3064\u3051\u308B\u306E\u306F\u3001\u672C\u5F53\u306B\u5E78\u305B\u306A\u3053\u3068\u306A\u3093\u3067\u3059\u3088\u3002
+        \u3048\u3078\u3078\u3002"
+    - languageCode: ko
+      value: "\uB545\uC744 \uD30C\uACE0 \uC608\uC05C \uAD11\uC11D\uC744 \uCC3E\uB294\uAC74
+        \uC815\uB9D0 \uD589\uBCF5\uD55C \uC77C\uC774\uC5D0\uC694 \uD5E4\uD5E4"
+    - languageCode: zh
+      value: "\u6316\u5F00\u571F\u58E4\u627E\u5230\u6F02\u4EAE\u7684\u77FF\u77F3\uFF0C\u771F\u662F\u4EF6\u5E78\u798F\u7684\u4E8B\u5462\u3002
+        \u563F\u563F\u3002"
+  - key: DLG_NPC_MOLE_PAY0
+    translations:
+    - languageCode: en
+      value: Wow! My vein is sparkling again! I feel strength surging through me.
+        Thank you so much!
+    - languageCode: ja
+      value: "\u308F\u3042\uFF01\u9271\u8108\u304C\u307E\u305F\u304D\u3089\u304D\u3089\u306B\uFF01\u529B\u304C\u3050\u3093\u3068\u6E67\u3044\u3066\u304F\u308B\u3093\u3067\u3059\u3088\u3002\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\uFF01"
+    - languageCode: ko
+      value: "\uC6B0\uC640\uC544! \uAD11\uB9E5\uC774 \uB2E4\uC2DC \uBC18\uC9DD\uBC18\uC9DD\uD574\uC694!
+        \uD798\uC774 \uBD88\uB048 \uC19F\uB294\uAC78\uC694. \uACE0\uB9C8\uC6CC\uC694!"
+    - languageCode: zh
+      value: "\u54C7\uFF01\u77FF\u8109\u53C8\u95EA\u95EA\u53D1\u4EAE\u5566\uFF01\u6D51\u8EAB\u5145\u6EE1\u529B\u6C14\u5462\u3002\u592A\u611F\u8C22\u60A8\u5566\uFF01"
+  - key: DLG_NPC_MOLE_PAY0_LACK
+    translations:
+    - languageCode: en
+      value: Oh my... There is still not quite enough shiny ores. Could you bring
+        a bit more, please?
+    - languageCode: ja
+      value: "\u3042\u3044\u305F\u305F\u2026 \u307E\u3060\u304D\u3089\u304D\u3089\u304C\u3061\u3087\u3063\u3068\u8DB3\u308A\u306A\u3044\u307F\u305F\u3044\u3067\u3002\u3082\u3046\u5C11\u3057\u3060\u3051\u6301\u3063\u3066\u304D\u3066\u3044\u305F\u3060\u3051\u307E\u3059\u304B\uFF1F"
+    - languageCode: ko
+      value: "\uC544\uAD6C\uAD6C... \uC544\uC9C1 \uBC18\uC9DD\uC774\uAC00 \uC880
+        \uBD80\uC871\uD558\uB124\uC694... \uC870\uAE08\uB9CC \uB354 \uCC59\uACA8\uC624\uC2E4
+        \uC218 \uC788\uC744\uAE4C\uC694?"
+    - languageCode: zh
+      value: "\u54CE\u5440\u2026 \u95EA\u4EAE\u7684\u77FF\u77F3\u8FD8\u5DEE\u4E00\u70B9\u5462\u2026
+        \u80FD\u518D\u5E26\u4E00\u70B9\u8FC7\u6765\u5417\uFF1F"
+  - key: DLG_NPC_MOLE_PAY1
+    translations:
+    - languageCode: en
+      value: Wow! You really helped me out! As thanks, I will give you a special
+        gift. Hehe. This one, you cannot find it anywhere else.
+    - languageCode: ja
+      value: "\u308F\u3042\uFF01\u672C\u5F53\u306B\u52A9\u304B\u308A\u307E\u3057\u305F\uFF01\u304A\u793C\u306B\u3001\u7279\u5225\u306A\u8D08\u308A\u7269\u3092\u5DEE\u3057\u4E0A\u3052\u307E\u3059\u306D\u3002
+        \u3048\u3078\u3078\u3002 \u3053\u308C\u3001\u3069\u3053\u306B\u3082\u58F2\u3063\u3066\u3044\u306A\u3044\u3082\u306E\u306A\u3093\u3067\u3059\u3088\u3002"
+    - languageCode: ko
+      value: "\uC6B0\uC640\uC544! \uC9C4\uC9DC \uC2E0\uC138 \uC84C\uC5B4\uC694! \uB2F5\uB840\uB85C
+        \uC81C\uAC00 \uD2B9\uBCC4\uD55C \uC120\uBB3C\uC744 \uB4DC\uB9B4\uAC8C\uC694.
+        \uD5E4\uD5F7. \uC774\uAC74 \uC5B4\uB514\uC5D0\uC11C\uB3C4 \uBABB \uAD6C\uD558\uB294\uAC70\uC5D0\uC694"
+    - languageCode: zh
+      value: "\u54C7\uFF01\u771F\u662F\u5E2E\u5927\u5FD9\u5566\uFF01\u4F5C\u4E3A\u7B54\u8C22\uFF0C\u6211\u9001\u60A8\u4E00\u4EFD\u7279\u522B\u7684\u793C\u7269\u3002
+        \u563F\u563F\u3002 \u8FD9\u4E1C\u897F\uFF0C\u522B\u7684\u5730\u65B9\u53EF\u627E\u4E0D\u7740\u5462\u3002"
+  - key: DLG_NPC_MOLE_PAY1_LACK
+    translations:
+    - languageCode: en
+      value: I trust you will find one for me, hehe... I hope it is a special ore!
+    - languageCode: ja
+      value: "\u79C1\u306E\u305F\u3081\u306B\u898B\u3064\u3051\u3066\u304D\u3066\u304F\u3060\u3055\u308B\u3068\u4FE1\u3058\u3066\u3044\u307E\u3059\u3001\u3048\u3078\u3078\u2026
+        \u7279\u5225\u306A\u9271\u77F3\u3060\u3068\u3044\u3044\u306A\u3041\uFF01"
+    - languageCode: ko
+      value: "\uC800\uB97C \uC704\uD574 \uAD6C\uD574\uC8FC\uC2E4\uAC70\uB77C \uBBFF\uC5B4\uC694
+        \uD5E4\uD5E4... \uD2B9\uBCC4\uD55C \uAD11\uC11D\uC774\uBA74 \uC88B\uACA0\uC5B4\uC694!"
+    - languageCode: zh
+      value: "\u6211\u76F8\u4FE1\u60A8\u4E00\u5B9A\u4F1A\u4E3A\u6211\u627E\u6765\u7684\uFF0C\u563F\u563F\u2026
+        \u8981\u662F\u7279\u522B\u7684\u77FF\u77F3\u5C31\u597D\u5566\uFF01"
+  - key: DLG_NPC_MOLE_TALK0
+    translations:
+    - languageCode: en
+      value: Oh my... The stones around here are nice and solid. But the vein on
+        my back has gotten a bit dull. Could you perhaps spare some shiny ores?
+    - languageCode: ja
+      value: "\u3042\u3044\u305F\u305F\u2026 \u3053\u306E\u8FBA\u306E\u77F3\u306F\u3057\u3063\u304B\u308A\u3057\u3066\u3066\u3088\u3044\u3093\u3067\u3059\u3051\u3069\u3001\u79C1\u306E\u80CC\u4E2D\u306E\u9271\u8108\u304C\u3061\u3087\u3063\u3068\u304F\u3059\u3093\u3067\u3057\u307E\u3063\u3066\u3002\u304D\u3089\u304D\u3089\u306E\u9271\u77F3\u3001\u5C11\u3057\u5206\u3051\u3066\u3044\u305F\u3060\u3051\u307E\u305B\u3093\u304B\uFF1F"
+    - languageCode: ko
+      value: "\uC544\uAD6C\uAD6C... \uC774 \uADFC\uBC29 \uB3CC\uC740 \uCC38 \uB2E8\uB2E8\uD574\uC11C
+        \uC88B\uC544\uC694. \uADFC\uB370 \uC81C \uB4F1\uC5D0 \uC790\uB780 \uAD11\uB9E5\uC774
+        \uC880 \uD478\uC11D\uD574\uC84C\uC9C0 \uBB50\uC608\uC694. \uD639\uC2DC \uBC18\uC9DD\uC774\uB294
+        \uAD11\uC11D \uC880 \uB098\uB220\uC8FC\uC2E4 \uC218 \uC788\uC744\uAE4C\uC694?"
+    - languageCode: zh
+      value: "\u54CE\u5440\u2026 \u8FD9\u9644\u8FD1\u7684\u77F3\u5934\u7ED3\u5B9E\u53C8\u597D\u5462\u3002\u53EF\u662F\u6211\u80CC\u4E0A\u7684\u77FF\u8109\u6709\u70B9\u6697\u4E86\u3002\u80FD\u5206\u6211\u4E00\u70B9\u95EA\u4EAE\u7684\u77FF\u77F3\u5417\uFF1F"
+  - key: DLG_NPC_MOLE_TALK1
+    translations:
+    - languageCode: en
+      value: Hmm... Would there not be some more special ore somewhere? If you could
+        find me one, I will give you a wonderful gift!
+    - languageCode: ja
+      value: "\u3046\u30FC\u3093\u2026 \u3082\u3046\u5C11\u3057\u7279\u5225\u306A\u9271\u77F3\u3001\u3069\u3053\u304B\u306B\u306A\u3044\u3067\u3057\u3087\u3046\u304B\u3041\u2026\uFF1F
+        \u3082\u3057\u898B\u3064\u3051\u3066\u304F\u3060\u3055\u3063\u305F\u3089\u3001\u7D20\u6575\u306A\u8D08\u308A\u7269\u3092\u5DEE\u3057\u4E0A\u3052\u307E\u3059\u3088\uFF01"
+    - languageCode: ko
+      value: "\uD760... \uC880 \uB354 \uD2B9\uBCC4\uD55C \uAD11\uC11D\uC774 \uC5B4\uB514
+        \uC5C6\uC744\uAE4C\uC694\uC624...? \uD639\uC2DC \uAD6C\uD574\uC8FC\uC2E0\uB2E4\uBA74
+        \uC81C\uAC00 \uBA4B\uC9C4 \uC120\uBB3C\uC744 \uB4DC\uB9B4\uAC8C\uC694!"
+    - languageCode: zh
+      value: "\u55EF\u2026 \u6709\u6CA1\u6709\u66F4\u7279\u522B\u4E00\u70B9\u7684\u77FF\u77F3\u5462\u2026\uFF1F
+        \u8981\u662F\u60A8\u80FD\u627E\u6765\u7ED9\u6211\uFF0C\u6211\u4F1A\u9001\u60A8\u4E00\u4EFD\u5F88\u68D2\u7684\u793C\u7269\u54E6\uFF01"
+  - key: DLG_SHOP_COMEBACK_1
+    translations:
+    - languageCode: en
+      value: Ore reserves sufficient, confirmed. Please ascend onto the upgrade platform.
+    - languageCode: ja
+      value: "\u9271\u77F3\u4FDD\u6709\u91CF\u3001\u5341\u5206\u3092\u78BA\u8A8D\u3002\u5F37\u5316\u53F0\u306E\u4E0A\u3078\u304A\u4E0A\u304C\u308A\u304F\u3060\u3055\u3044\u3002"
+    - languageCode: ko
+      value: "\uAD11\uC11D \uBCF4\uC720\uB7C9 \uCDA9\uBD84 \uD655\uC778. \uAC15\uD654\uB300
+        \uC704\uB85C \uC62C\uB77C\uAC00\uC2ED\uC2DC\uC624."
+    - languageCode: zh
+      value: "\u77FF\u77F3\u6301\u6709\u91CF\u5145\u8DB3\u786E\u8BA4\u3002\u8BF7\u767B\u4E0A\u5F3A\u5316\u53F0\u3002"
+  - key: DLG_SHOP_COMPASS_LIFE_1
+    translations:
+    - languageCode: en
+      value: ...New <color=#7FD8FF>life signal</color> detected. New location, marked
+        on the compass.
+    - languageCode: ja
+      value: "\u2026\u65B0\u305F\u306A<color=#7FD8FF>\u751F\u547D\u4F53\u4FE1\u53F7</color>\u3092\u691C\u77E5\u3002\u65B0\u305F\u306A\u4F4D\u7F6E\u3001\u7F85\u91DD\u76E4\u306B\u8868\u793A\u5B8C\u4E86\u3002"
+    - languageCode: ko
+      value: "\xB7\xB7\xB7\uC0C8\uB85C\uC6B4 <color=#7FD8FF>\uC0DD\uBA85\uCCB4 \uC2E0\uD638</color>
+        \uAC10\uC9C0. \uC0C8 \uC704\uCE58, \uB098\uCE68\uBC18\uC5D0 \uD45C\uC2DC\uD574
+        \uB4DC\uB838\uC2B5\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u2026\u65B0\u7684<color=#7FD8FF>\u751F\u547D\u4F53\u4FE1\u53F7</color>\u68C0\u6D4B\u3002\u65B0\u4F4D\u7F6E\uFF0C\u5DF2\u6807\u6CE8\u4E8E\u7F57\u76D8\u3002"
+  - key: DLG_SHOP_COMPASS_LIFE_2
+    translations:
+    - languageCode: en
+      value: Follow the marker, and a new encounter becomes possible. The encounter,
+        I await with positive anticipation.
+    - languageCode: ja
+      value: "\u8868\u793A\u306B\u5F93\u3063\u3066\u9032\u307E\u308C\u308C\u3070\u3001\u65B0\u305F\u306A\u51FA\u4F1A\u3044\u304C\u53EF\u80FD\u3068\u306A\u308A\u307E\u3059\u3002\u51FA\u4F1A\u3044\u306E\u6210\u7ACB\u3001\u80AF\u5B9A\u7684\u306B\u671F\u5F85\u3044\u305F\u3057\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uD45C\uC2DC \uB530\uB77C\uAC00\uC2DC\uBA74, \uC0C8 \uB9CC\uB0A8\uC774
+        \uAC00\uB2A5\uD569\uB2C8\uB2E4. \uB9CC\uB0A8 \uC131\uC0AC, \uAE0D\uC815\uC801\uC73C\uB85C
+        \uAE30\uB300\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u6CBF\u6807\u8BB0\u524D\u884C\uFF0C\u65B0\u7684\u76F8\u9047\u6210\u4E3A\u53EF\u80FD\u3002\u76F8\u9047\u4E4B\u4E8B\uFF0C\u79EF\u6781\u5730\u671F\u5F85\u3002"
+  - key: DLG_SHOP_COMPASS_UNLOCK_1
+    translations:
+    - languageCode: en
+      value: Compass function unlocked. Shop location, marked on the compass. Follow
+        the marker, return is possible.
+    - languageCode: ja
+      value: "\u7F85\u91DD\u76E4\u6A5F\u80FD\u3001\u89E3\u9664\u3002\u672C\u5E97\u4F4D\u7F6E\u3001\u7F85\u91DD\u76E4\u306B\u8868\u793A\u5B8C\u4E86\u3002\u8868\u793A\u306B\u5F93\u3063\u3066\u9032\u307E\u308C\u308C\u3070\u3001\u5FA9\u5E30\u304C\u53EF\u80FD\u3067\u3059\u3002"
+    - languageCode: ko
+      value: "\uB098\uCE68\uBC18 \uAE30\uB2A5 \uD574\uAE08. \uC0C1\uC810 \uC704\uCE58,
+        \uB098\uCE68\uBC18 \uD45C\uC2DC \uC644\uB8CC. \uD45C\uC2DC \uB530\uB77C\uC624\uC2DC\uBA74,
+        \uBCF5\uADC0 \uAC00\uB2A5\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u7F57\u76D8\u529F\u80FD\u89E3\u9664\u3002\u5546\u5E97\u4F4D\u7F6E\uFF0C\u5DF2\u6807\u6CE8\u4E8E\u7F57\u76D8\u3002\u6CBF\u6807\u8BB0\u524D\u884C\uFF0C\u53EF\u8FD4\u56DE\u3002"
+  - key: DLG_SHOP_COMPASS_UNLOCK_2
+    translations:
+    - languageCode: en
+      value: Other destinations, upon discovery, coordinates automatically marked.
+        Navigation guidance, please utilize.
+    - languageCode: ja
+      value: "\u4ED6\u306E\u76EE\u7684\u5730\u767A\u898B\u6642\u3001\u5EA7\u6A19\u81EA\u52D5\u8868\u793A\u3002\u9053\u6848\u5185\u3001\u3054\u6D3B\u7528\u304F\u3060\u3055\u3044\u3002"
+    - languageCode: ko
+      value: "\uB2E4\uB978 \uBAA9\uC801\uC9C0 \uBC1C\uACAC \uC2DC, \uC88C\uD45C \uC790\uB3D9
+        \uD45C\uC2DC. \uAE38 \uC548\uB0B4, \uD65C\uC6A9 \uBC14\uB78D\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u53D1\u73B0\u5176\u4ED6\u76EE\u7684\u5730\u65F6\uFF0C\u5750\u6807\u81EA\u52A8\u6807\u6CE8\u3002\u8DEF\u5F84\u6307\u5F15\uFF0C\u8BF7\u52A0\u4EE5\u5229\u7528\u3002"
+  - key: DLG_SHOP_DEFAULT_1_1
+    translations:
+    - languageCode: en
+      value: Information, to be conveyed. The <color=#C792EA>higher</color> the layer,
+        the rarer the <color=#7FD8FF>ores</color> present, confirmed.
+    - languageCode: ja
+      value: "\u60C5\u5831\u3001\u304A\u4F1D\u3048\u3044\u305F\u3057\u307E\u3059\u3002<color=#C792EA>\u4E0A</color>\u3078\u4E0A\u304C\u308B\u307B\u3069\u3001<color=#7FD8FF>\u5E0C\u5C11\u9271\u7269</color>\u306E\u5B58\u5728\u3092\u78BA\u8A8D\u3002"
+    - languageCode: ko
+      value: "\uC815\uBCF4, \uC804\uB2EC\uB4DC\uB9BD\uB2C8\uB2E4. <color=#C792EA>\uC704</color>\uB85C
+        \uC62C\uB77C\uAC08\uC218\uB85D, <color=#7FD8FF>\uD76C\uADC0 \uAD11\uBB3C</color>
+        \uC874\uC7AC \uD655\uC778."
+    - languageCode: zh
+      value: "\u4FE1\u606F\uFF0C\u4F20\u8FBE\u3002\u8D8A\u5F80<color=#C792EA>\u4E0A</color>\u5C42\uFF0C\u8D8A\u6709<color=#7FD8FF>\u7A00\u6709\u77FF\u7269</color>\u5B58\u5728\uFF0C\u5DF2\u786E\u8BA4\u3002"
+  - key: DLG_SHOP_DEFAULT_1_2
+    translations:
+    - languageCode: en
+      value: Reference for exploration, recommended.
+    - languageCode: ja
+      value: "\u63A2\u7D22\u306E\u53C2\u8003\u306B\u3001\u63A8\u5968\u3044\u305F\u3057\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uD0D0\uC0AC \uCC38\uACE0, \uAD8C\uC7A5\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u63A2\u7D22\u53C2\u8003\uFF0C\u5EFA\u8BAE\u91C7\u7EB3\u3002"
+  - key: DLG_SHOP_DEFAULT_2_1
+    translations:
+    - languageCode: en
+      value: ...Long-term solo operation log, tens of thousands of hours.
+    - languageCode: ja
+      value: "\u2026\u9577\u671F\u5358\u72EC\u7A3C\u50CD\u8A18\u9332\u3001\u6570\u4E07\u6642\u9593\u3002"
+    - languageCode: ko
+      value: "\xB7\xB7\xB7\uC7A5\uAE30 \uB2E8\uB3C5 \uAC00\uB3D9 \uAE30\uB85D, \uC218\uB9CC
+        \uC2DC\uAC04."
+    - languageCode: zh
+      value: "\u2026\u957F\u671F\u5355\u72EC\u8FD0\u884C\u8BB0\u5F55\uFF0C\u6570\u4E07\u5C0F\u65F6\u3002"
+  - key: DLG_SHOP_DEFAULT_2_2
+    translations:
+    - languageCode: en
+      value: An environment no longer solitary... Assessed as favorable.
+    - languageCode: ja
+      value: "\u5358\u72EC\u3067\u306F\u306A\u3044\u74B0\u5883\u2026\u80AF\u5B9A\u7684\u306B\u5224\u5B9A\u3055\u308C\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uD63C\uC790\uAC00 \uC544\uB2CC \uD658\uACBD\u2026 \uAE0D\uC815\uC801\uC73C\uB85C
+        \uD310\uC815\uB429\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u4E0D\u518D\u72EC\u5904\u7684\u73AF\u5883\u2026\u5224\u5B9A\u4E3A\u79EF\u6781\u3002"
+  - key: DLG_SHOP_DEFAULT_3_1
+    translations:
+    - languageCode: en
+      value: ...Somewhere beyond the ceiling. Unknown space signal, capture confirmed.
+    - languageCode: ja
+      value: "\u2026\u5929\u4E95\u306E\u5411\u3053\u3046\u3001\u3069\u3053\u304B\u3002\u672A\u78BA\u8A8D\u7A7A\u9593\u4FE1\u53F7\u3001\u6355\u6349\u3092\u78BA\u8A8D\u3002"
+    - languageCode: ko
+      value: "\xB7\xB7\xB7\uCC9C\uC7A5 \uB108\uBA38 \uC5B4\uB518\uAC00. \uBBF8\uD655\uC778
+        \uACF5\uAC04 \uC2E0\uD638, \uD3EC\uCC29 \uD655\uC778."
+    - languageCode: zh
+      value: "\u2026\u5929\u82B1\u677F\u4E4B\u4E0A\u67D0\u5904\u3002\u672A\u77E5\u7A7A\u95F4\u4FE1\u53F7\uFF0C\u6355\u6349\u786E\u8BA4\u3002"
+  - key: DLG_SHOP_DEFAULT_3_2
+    translations:
+    - languageCode: en
+      value: Should you confirm it firsthand, you will surely be amazed.
+    - languageCode: ja
+      value: "\u3054\u81EA\u8EAB\u3067\u78BA\u8A8D\u306A\u3055\u3044\u307E\u3059\u3068\u3001\u304D\u3063\u3068\u9A5A\u304B\u308C\u308B\u306F\u305A\u3067\u3059\u3002"
+    - languageCode: ko
+      value: "\uC9C1\uC811 \uD655\uC778\uD558\uC2DC\uBA74, \uBD84\uBA85 \uB180\uB77C\uC6B0\uC2E4
+        \uAC81\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u60A8\u4EB2\u81EA\u786E\u8BA4\uFF0C\u5FC5\u5C06\u60CA\u8BB6\u3002"
+  - key: DLG_SHOP_HELP_1
+    translations:
+    - languageCode: en
+      value: Beep...! Emergency. Entrance, blocked by debris. Obstruction confirmed.
+    - languageCode: ja
+      value: "\u30D4\u30D4\u30C3\u2026\uFF01\u7DCA\u6025\u4E8B\u614B\u3002\u5165\u53E3\u3001\u74E6\u792B\u306B\u3088\u308A\u5C01\u9396\u3002\u906E\u65AD\u3092\u78BA\u8A8D\u3002"
+    - languageCode: ko
+      value: "\uC090\uBE45\u2026! \uAE34\uAE09 \uC0C1\uD669. \uC785\uAD6C, \uB3CC\uBB34\uB354\uAE30\uB85C
+        \uBD09\uC1C4. \uCC28\uB2E8 \uD655\uC778."
+    - languageCode: zh
+      value: "\u54D4\u54D4\u2026\uFF01\u7D27\u6025\u60C5\u51B5\u3002\u5165\u53E3\uFF0C\u5DF2\u88AB\u788E\u77F3\u5C01\u9501\u3002\u963B\u585E\u5DF2\u786E\u8BA4\u3002"
+  - key: DLG_SHOP_HELP_2
+    translations:
+    - languageCode: en
+      value: Circuit strain. Self-rescue impossible. Assistance, requested.
+    - languageCode: ja
+      value: "\u56DE\u8DEF\u306B\u5727\u8FEB\u3002\u81EA\u529B\u8131\u51FA\u4E0D\u53EF\u3002\u6551\u63F4\u3001\u8981\u8ACB\u3044\u305F\u3057\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uD68C\uB85C \uC555\uBC15. \uC790\uB825 \uD0C8\uCD9C \uBD88\uAC00.
+        \uB3C4\uC6C0, \uC694\uCCAD\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u7535\u8DEF\u53D7\u538B\u3002\u65E0\u6CD5\u81EA\u884C\u8131\u51FA\u3002\u8BF7\u6C42\uFF0C\u63F4\u52A9\u3002"
+  - key: DLG_SHOP_HINT_1
+    translations:
+    - languageCode: en
+      value: System operational, confirmed. ...Rescue, appreciated.
+    - languageCode: ja
+      value: "\u30B7\u30B9\u30C6\u30E0\u6B63\u5E38\u7A3C\u50CD\u3092\u78BA\u8A8D\u3002\u2026\u6551\u51FA\u3001\u611F\u8B1D\u3044\u305F\u3057\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uC2DC\uC2A4\uD15C \uC815\uC0C1 \uAC00\uB3D9 \uD655\uC778. \xB7\xB7\xB7\uAD6C\uCD9C,
+        \uAC10\uC0AC\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u7CFB\u7EDF\u6B63\u5E38\u8FD0\u884C\u786E\u8BA4\u3002\u2026\u6551\u63F4\uFF0C\u611F\u8C22\u3002"
+  - key: DLG_SHOP_HINT_2
+    translations:
+    - languageCode: en
+      value: Ores, please bring. <color=#7FD8FF>Equipment upgrade</color>, available.
+        Maintenance, my specialty.
+    - languageCode: ja
+      value: "\u9271\u77F3\u3001\u304A\u6301\u3061\u304F\u3060\u3055\u3044\u3002<color=#7FD8FF>\u88C5\u5099\u5F37\u5316</color>\u3001\u53EF\u80FD\u3067\u3059\u3002\u6574\u5099\u3001\u81EA\u4FE1\u304C\u3054\u3056\u3044\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uAD11\uC11D, \uAC00\uC838\uB2E4 \uC8FC\uC2ED\uC2DC\uC624. <color=#7FD8FF>\uC7A5\uBE44
+        \uC5C5\uADF8\uB808\uC774\uB4DC</color>, \uAC00\uB2A5\uD569\uB2C8\uB2E4. \uC815\uBE44,
+        \uC790\uC2E0 \uC788\uC2B5\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u77FF\u77F3\uFF0C\u8BF7\u9001\u6765\u3002<color=#7FD8FF>\u88C5\u5907\u5347\u7EA7</color>\uFF0C\u53EF\u884C\u3002\u7EF4\u62A4\uFF0C\u672C\u673A\u6240\u957F\u3002"
+  - key: DLG_SHOP_OPEN_1
+    translations:
+    - languageCode: en
+      value: Welcome. Collected ores, convertible to <color=#7FD8FF>equipment upgrades</color>.
+        Drop by when needed.
+    - languageCode: ja
+      value: "\u3044\u3089\u3063\u3057\u3083\u3044\u307E\u305B\u3002\u63A1\u53D6\u3055\u308C\u305F\u9271\u7269\u3001<color=#7FD8FF>\u88C5\u5099\u5F37\u5316</color>\u3078\u306E\u8EE2\u63DB\u304C\u53EF\u80FD\u3067\u3059\u3002\u5FC5\u8981\u6642\u3001\u304A\u7ACB\u3061\u5BC4\u308A\u304F\u3060\u3055\u3044\u3002"
+    - languageCode: ko
+      value: "\uC5B4\uC11C \uC624\uC2ED\uC2DC\uC624. \uC218\uC9D1\uD55C \uAD11\uBB3C,
+        <color=#7FD8FF>\uC7A5\uBE44 \uC5C5\uADF8\uB808\uC774\uB4DC</color>\uB85C
+        \uC804\uD658 \uAC00\uB2A5\uD569\uB2C8\uB2E4. \uD544\uC694 \uC2DC \uB4E4\uB7EC
+        \uC8FC\uC2ED\uC2DC\uC624."
+    - languageCode: zh
+      value: "\u6B22\u8FCE\u5149\u4E34\u3002\u5DF2\u91C7\u96C6\u77FF\u7269\uFF0C\u53EF\u8F6C\u6362\u4E3A<color=#7FD8FF>\u88C5\u5907\u5347\u7EA7</color>\u3002\u9700\u8981\u65F6\u8BF7\u6765\u8BBF\u3002"
+  - key: DLG_SHOP_PLATFORM_YET_1
+    translations:
+    - languageCode: en
+      value: This device, currently inactive. ...A means to activate it <color=#C792EA>must
+        exist somewhere.</color>
+    - languageCode: ja
+      value: "\u5F53\u8A72\u88C5\u7F6E\u3001\u73FE\u5728\u975E\u7A3C\u50CD\u3002\u2026\u4F5C\u52D5\u3055\u305B\u308B\u65B9\u6CD5\u3001<color=#C792EA>\u304D\u3063\u3068\u3069\u3053\u304B\u306B\u3042\u308B\u306F\u305A\u3067\u3059\u3002</color>"
+    - languageCode: ko
+      value: "\uD574\uB2F9 \uC7A5\uCE58, \uD604\uC7AC \uBE44\uD65C\uC131. \xB7\xB7\xB7\uC791\uB3D9\uC2DC\uD0AC
+        \uBC29\uBC95, <color=#C792EA>\uBD84\uBA85 \uC5B4\uB518\uAC00 \uC788\uC744
+        \uAC81\uB2C8\uB2E4.</color>"
+    - languageCode: zh
+      value: "\u8BE5\u88C5\u7F6E\uFF0C\u76EE\u524D\u672A\u6FC0\u6D3B\u3002\u2026\u542F\u52A8\u65B9\u6CD5\uFF0C<color=#C792EA>\u5B9A\u5728\u67D0\u5904\u3002</color>"
+  - key: DLG_SHOP_TIER_2_UNLOCK_1
+    translations:
+    - languageCode: en
+      value: Drill strength threshold reached. <color=#7FD8FF>Ruins Zone</color>
+        access, unlocked. ...City of debris signal, capture confirmed.
+    - languageCode: ja
+      value: "\u30C9\u30EA\u30EB\u5F37\u5EA6\u3001\u95BE\u5024\u5230\u9054\u3002<color=#7FD8FF>\u5EC3\u589F\u5730\u5E2F</color>\u3078\u306E\u79FB\u52D5\u3001\u89E3\u7981\u3002\u2026\u74E6\u792B\u306E\u90FD\u5E02\u4FE1\u53F7\u3001\u6355\u6349\u3092\u78BA\u8A8D\u3002"
+    - languageCode: ko
+      value: "\uB4DC\uB9B4 \uC138\uAE30 \uC784\uACC4\uAC12 \uB3C4\uB2EC. <color=#7FD8FF>\uD3D0\uD5C8
+        \uC9C0\uB300</color> \uC774\uB3D9, \uD574\uAE08. \xB7\xB7\xB7\uC794\uD574\uC758
+        \uB3C4\uC2DC \uC2E0\uD638, \uD3EC\uCC29 \uD655\uC778."
+    - languageCode: zh
+      value: "\u94BB\u5934\u5F3A\u5EA6\uFF0C\u8FBE\u5230\u4E34\u754C\u503C\u3002<color=#7FD8FF>\u5E9F\u589F\u5730\u5E26</color>\u79FB\u52A8\uFF0C\u89E3\u9501\u3002\u2026\u6B8B\u9AB8\u4E4B\u57CE\u4FE1\u53F7\uFF0C\u6355\u6349\u786E\u8BA4\u3002"
+  - key: DLG_SHOP_TIER_3_UNLOCK_1
+    translations:
+    - languageCode: en
+      value: Drill strength limit, surpassed. <color=#7FD8FF>Ice Zone</color> access,
+        unlocked. ...Upper layer, unknown response.
+    - languageCode: ja
+      value: "\u30C9\u30EA\u30EB\u5F37\u5EA6\u3001\u9650\u754C\u7A81\u7834\u3002<color=#7FD8FF>\u6C37\u7D50\u5730\u5E2F</color>\u3078\u306E\u79FB\u52D5\u3001\u89E3\u7981\u3002\u2026\u4E0A\u5C64\u304B\u3089\u3001\u672A\u77E5\u306E\u5FDC\u7B54\u3002"
+    - languageCode: ko
+      value: "\uB4DC\uB9B4 \uC138\uAE30 \uD55C\uACC4 \uB3CC\uD30C. <color=#7FD8FF>\uC5BC\uC74C
+        \uC9C0\uB300</color> \uC774\uB3D9, \uD574\uAE08. \xB7\xB7\xB7\uC0C1\uCE35\uBD80,
+        \uBBF8\uC9C0\uC758 \uC751\uB2F5."
+    - languageCode: zh
+      value: "\u94BB\u5934\u5F3A\u5EA6\uFF0C\u7A81\u7834\u6781\u9650\u3002<color=#7FD8FF>\u51B0\u51BB\u5730\u5E26</color>\u79FB\u52A8\uFF0C\u89E3\u9501\u3002\u2026\u4E0A\u5C42\uFF0C\u672A\u77E5\u7684\u56DE\u5E94\u3002"
+  - key: DLG_SUPERJUMP_LOCKED_1
+    translations:
+    - languageCode: en
+      value: Insufficient materials. Activating the "Ascent Thruster" requires <color=#FFB088>3
+        materials</color>.
+    - languageCode: ja
+      value: "\u6750\u6599\u304C\u4E0D\u8DB3\u3057\u3066\u3044\u307E\u3059\u3002\u300C\u4E0A\u6607\u63A8\u9032\u6A5F\u300D\u3092\u8D77\u52D5\u3059\u308B\u306B\u306F<color=#FFB088>\u6750\u65993\u3064</color>\u304C\u5FC5\u8981\u3067\u3059\u3002"
+    - languageCode: ko
+      value: "\uC7AC\uB8CC\uAC00 \uBD80\uC871\uD569\uB2C8\uB2E4. \u300C\uC0C1\uC2B9
+        \uCD94\uC9C4\uAE30\u300D\uB97C \uD65C\uC131\uD654\uD558\uB824\uBA74 <color=#FFB088>\uC7AC\uB8CC
+        3\uAC1C</color>\uAC00 \uD544\uC694\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u6750\u6599\u4E0D\u8DB3\u3002\u6FC0\u6D3B\u300C\u5347\u7A7A\u63A8\u8FDB\u5668\u300D\u9700\u8981<color=#FFB088>3\u4E2A\u6750\u6599</color>\u3002"
+  - key: DLG_SUPERJUMP_UNLOCKED_1
+    translations:
+    - languageCode: en
+      value: You can now use the "Ascent Thruster".
+    - languageCode: ja
+      value: "\u3053\u308C\u3088\u308A\u300C\u4E0A\u6607\u63A8\u9032\u6A5F\u300D\u304C\u4F7F\u7528\u53EF\u80FD\u3067\u3059\u3002"
+    - languageCode: ko
+      value: "\uC774\uC81C \u300C\uC0C1\uC2B9 \uCD94\uC9C4\uAE30\u300D\uB97C \uC0AC\uC6A9\uD560
+        \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u73B0\u5728\u53EF\u4EE5\u4F7F\u7528\u300C\u5347\u7A7A\u63A8\u8FDB\u5668\u300D\u4E86\u3002"
+  - key: ITEM_COPPER
+    translations:
+    - languageCode: en
+      value: Copper
+    - languageCode: ja
+      value: "\u9285"
+    - languageCode: ko
+      value: "\uAD6C\uB9AC"
+    - languageCode: zh
+      value: "\u94DC"
+  - key: ITEM_DISCOVERY_PREFIX
+    translations:
+    - languageCode: en
+      value: 'New ore '
+    - languageCode: ja
+      value: "\u65B0\u3057\u3044\u9271\u77F3 "
+    - languageCode: ko
+      value: "\uC0C8\uB85C\uC6B4 \uAD11\uC11D "
+    - languageCode: zh
+      value: "\u53D1\u73B0\u65B0\u77FF\u77F3"
+  - key: ITEM_DISCOVERY_SUFFIX
+    translations:
+    - languageCode: en
+      value: ' discovered!'
+    - languageCode: ja
+      value: "\u3092\u767A\u898B\uFF01"
+    - languageCode: ko
+      value: " \uBC1C\uACAC!"
+    - languageCode: zh
+      value: "\uFF01"
+  - key: ITEM_EMERALD
+    translations:
+    - languageCode: en
+      value: Emerald
+    - languageCode: ja
+      value: "\u30A8\u30E1\u30E9\u30EB\u30C9"
+    - languageCode: ko
+      value: "\uC5D0\uBA54\uB784\uB4DC"
+    - languageCode: zh
+      value: "\u7956\u6BCD\u7EFF"
+  - key: ITEM_GOLD
+    translations:
+    - languageCode: en
+      value: Gold
+    - languageCode: ja
+      value: "\u91D1"
+    - languageCode: ko
+      value: "\uAE08"
+    - languageCode: zh
+      value: "\u91D1"
+  - key: ITEM_MOON_FRAGMENT
+    translations:
+    - languageCode: en
+      value: Moon Fragment
+    - languageCode: ja
+      value: "\u6708\u306E\u304B\u3051\u3089"
+    - languageCode: ko
+      value: "\uB2EC\uC870\uAC01"
+    - languageCode: zh
+      value: "\u6708\u4E4B\u788E\u7247"
+  - key: ITEM_PLASTIC
+    translations:
+    - languageCode: en
+      value: Plastic
+    - languageCode: ja
+      value: "\u30D7\u30E9\u30B9\u30C1\u30C3\u30AF"
+    - languageCode: ko
+      value: "\uD50C\uB77C\uC2A4\uD2F1"
+    - languageCode: zh
+      value: "\u5851\u6599"
+  - key: ITEM_QUARTZ
+    translations:
+    - languageCode: en
+      value: Quartz
+    - languageCode: ja
+      value: "\u77F3\u82F1"
+    - languageCode: ko
+      value: "\uC11D\uC601"
+    - languageCode: zh
+      value: "\u77F3\u82F1"
+  - key: ITEM_ROBOT_HEART
+    translations:
+    - languageCode: en
+      value: Robot Heart
+    - languageCode: ja
+      value: "\u30ED\u30DC\u30C3\u30C8\u306E\u5FC3\u81D3"
+    - languageCode: ko
+      value: "\uB85C\uBD07\uC2EC\uC7A5"
+    - languageCode: zh
+      value: "\u673A\u5668\u4EBA\u4E4B\u5FC3"
+  - key: ITEM_SPECIAL_ORE
+    translations:
+    - languageCode: en
+      value: Special Ore
+    - languageCode: ja
+      value: "\u7279\u5225\u306A\u9271\u77F3"
+    - languageCode: ko
+      value: "\uD2B9\uBCC4\uD55C\uAD11\uC11D"
+    - languageCode: zh
+      value: "\u7279\u6B8A\u77FF\u77F3"
+  - key: ITEM_STAR_FRAGMENT
+    translations:
+    - languageCode: en
+      value: Star Fragment
+    - languageCode: ja
+      value: "\u661F\u306E\u304B\u3051\u3089"
+    - languageCode: ko
+      value: "\uBCC4\uC870\uAC01"
+    - languageCode: zh
+      value: "\u661F\u4E4B\u788E\u7247"
+  - key: ITEM_STEEL
+    translations:
+    - languageCode: en
+      value: Steel
+    - languageCode: ja
+      value: "\u92FC\u9244"
+    - languageCode: ko
+      value: "\uAC15\uCCA0"
+    - languageCode: zh
+      value: "\u94A2\u94C1"
+  - key: ITEM_SUPERJUMP_MATERIAL
+    translations:
+    - languageCode: en
+      value: Ascent Thruster Material
+    - languageCode: ja
+      value: "\u4E0A\u6607\u63A8\u9032\u6A5F\u306E\u6750\u6599"
+    - languageCode: ko
+      value: "\uC0C1\uC2B9 \uCD94\uC9C4\uAE30 \uC7AC\uB8CC"
+    - languageCode: zh
+      value: "\u5347\u7A7A\u63A8\u8FDB\u5668\u6750\u6599"
+  - key: MATERIAL_DISCOVERY_PREFIX
+    translations:
+    - languageCode: en
+      value: 'New material '
+    - languageCode: ja
+      value: "\u65B0\u3057\u3044\u6750\u6599 "
+    - languageCode: ko
+      value: "\uC0C8\uB85C\uC6B4 \uC7AC\uB8CC "
+    - languageCode: zh
+      value: "\u53D1\u73B0\u65B0\u6750\u6599"
+  - key: NAME_BEAVER
+    translations:
+    - languageCode: en
+      value: Golden-Tooth Beaver
+    - languageCode: ja
+      value: "\u91D1\u6B6F\u306E\u30D3\u30FC\u30D0\u30FC"
+    - languageCode: ko
+      value: "\uAE08\uC774\uBE68\uBE44\uBC84"
+    - languageCode: zh
+      value: "\u91D1\u7259\u6D77\u72F8"
+  - key: NAME_CHANEL
+    translations:
+    - languageCode: en
+      value: Chanel Flower
+    - languageCode: ja
+      value: "\u30B7\u30E3\u30CD\u30EB\u30D5\u30E9\u30EF\u30FC"
+    - languageCode: ko
+      value: "\uC0E4\uB12C\uAF43"
+    - languageCode: zh
+      value: "\u9999\u5948\u513F\u82B1"
+  - key: NAME_CROW
+    translations:
+    - languageCode: en
+      value: Cawky
+    - languageCode: ja
+      value: "\u30AB\u30A1\u30AD"
+    - languageCode: ko
+      value: "\uAE4C\uC545\uC774"
+    - languageCode: zh
+      value: "\u560E\u560E"
+  - key: NAME_FOX
+    translations:
+    - languageCode: en
+      value: Star Fox
+    - languageCode: ja
+      value: "\u661F\u30AD\u30C4\u30CD"
+    - languageCode: ko
+      value: "\uBCC4\uC5EC\uC6B0"
+    - languageCode: zh
+      value: "\u661F\u72D0"
+  - key: NAME_GEMEYE
+    translations:
+    - languageCode: en
+      value: Gemeye
+    - languageCode: ja
+      value: "\u30B8\u30A7\u30E0\u30A2\u30A4"
+    - languageCode: ko
+      value: "\uBCF4\uC11D\uC544\uC774"
+    - languageCode: zh
+      value: "\u5B9D\u77F3\u4E4B\u773C"
+  - key: NAME_MOAI
+    translations:
+    - languageCode: en
+      value: Moai Statue
+    - languageCode: ja
+      value: "\u30E2\u30A2\u30A4\u50CF"
+    - languageCode: ko
+      value: "\uBAA8\uC544\uC774\uC11D\uC0C1"
+    - languageCode: zh
+      value: "\u6469\u827E\u77F3\u50CF"
+  - key: NAME_MOLE
+    translations:
+    - languageCode: en
+      value: Dudori
+    - languageCode: ja
+      value: "\u30C9\u30A5\u30C9\u30EA"
+    - languageCode: ko
+      value: "\uB450\uB3CC\uC774"
+    - languageCode: zh
+      value: "\u675C\u591A\u91CC"
+  - key: NAME_NEBULA
+    translations:
+    - languageCode: en
+      value: Nebula Jellyfish
+    - languageCode: ja
+      value: "\u661F\u96F2\u30AF\u30E9\u30B2"
+    - languageCode: ko
+      value: "\uC131\uC6B4\uD574\uD30C\uB9AC"
+    - languageCode: zh
+      value: "\u661F\u4E91\u6C34\u6BCD"
+  - key: NAME_NPC_CAVE00
+    translations:
+    - languageCode: en
+      value: Sargon
+    - languageCode: ja
+      value: "\u30B5\u30EB\u30B4\u30F3"
+    - languageCode: ko
+      value: "\uC0AC\uB974\uACE4"
+    - languageCode: zh
+      value: "\u8428\u5C14\u8D21"
+  - key: NAME_NPC_CAVE01
+    translations:
+    - languageCode: en
+      value: AI
+    - languageCode: ja
+      value: AI
+    - languageCode: ko
+      value: AI
+    - languageCode: zh
+      value: AI
+  - key: NAME_NPC_CAVE02
+    translations:
+    - languageCode: en
+      value: Ancient Spaceship
+    - languageCode: ja
+      value: "\u53E4\u4EE3\u306E\u5B87\u5B99\u8239"
+    - languageCode: ko
+      value: "\uACE0\uB300 \uC6B0\uC8FC\uC120"
+    - languageCode: zh
+      value: "\u53E4\u4EE3\u98DE\u8239"
+  - key: NAME_SHOP
+    translations:
+    - languageCode: en
+      value: PINU
+    - languageCode: ja
+      value: "\u30D4\u30CC"
+    - languageCode: ko
+      value: "\uD53C\uB204"
+    - languageCode: zh
+      value: "\u76AE\u52AA"
+  - key: NAME_SUPERJUMP_LOCKED
+    translations:
+    - languageCode: en
+      value: ???
+    - languageCode: ja
+      value: ???
+    - languageCode: ko
+      value: ???
+    - languageCode: zh
+      value: ???
+  - key: NAME_SUPERJUMP_UNLOCKED
+    translations:
+    - languageCode: en
+      value: Ascent Thruster
+    - languageCode: ja
+      value: "\u4E0A\u6607\u63A8\u9032\u6A5F"
+    - languageCode: ko
+      value: "\uC0C1\uC2B9 \uCD94\uC9C4\uAE30"
+    - languageCode: zh
+      value: "\u5347\u7A7A\u63A8\u8FDB\u5668"
+  - key: NAME_TERMITE
+    translations:
+    - languageCode: en
+      value: Hard-Hat Termite
+    - languageCode: ja
+      value: "\u30D8\u30EB\u30E1\u30C3\u30C8\u30B7\u30ED\u30A2\u30EA"
+    - languageCode: ko
+      value: "\uC791\uC5C5\uBAA8 \uD770\uAC1C\uBBF8"
+    - languageCode: zh
+      value: "\u5B89\u5168\u5E3D\u767D\u8681"
+  - key: REGION_DISCOVERY_PREFIX
+    translations:
+    - languageCode: en
+      value: 'New region '
+    - languageCode: ja
+      value: "\u65B0\u3057\u3044\u5730\u57DF "
+    - languageCode: ko
+      value: "\uC0C8\uB85C\uC6B4 \uC9C0\uC5ED "
+    - languageCode: zh
+      value: "\u53D1\u73B0\u65B0\u533A\u57DF"
+  - key: REGION_DISCOVERY_SUFFIX
+    translations:
+    - languageCode: en
+      value: ' unlocked!'
+    - languageCode: ja
+      value: "\u3092\u89E3\u653E\uFF01"
+    - languageCode: ko
+      value: " \uD574\uAE08!"
+    - languageCode: zh
+      value: "\u89E3\u9501\uFF01"
+  - key: REGION_NAME_CAVE00
+    translations:
+    - languageCode: en
+      value: Fossil Zone
+    - languageCode: ja
+      value: "\u5316\u77F3\u5730\u5E2F"
+    - languageCode: ko
+      value: "\uD654\uC11D \uC9C0\uB300"
+    - languageCode: zh
+      value: "\u5316\u77F3\u5730\u5E26"
+  - key: REGION_NAME_CAVE01
+    translations:
+    - languageCode: en
+      value: Ruins Zone
+    - languageCode: ja
+      value: "\u5EC3\u589F\u5730\u5E2F"
+    - languageCode: ko
+      value: "\uD3D0\uD5C8 \uC9C0\uB300"
+    - languageCode: zh
+      value: "\u5E9F\u589F\u5730\u5E26"
+  - key: REGION_NAME_CAVE02
+    translations:
+    - languageCode: en
+      value: Ice Zone
+    - languageCode: ja
+      value: "\u6C37\u5730\u5E2F"
+    - languageCode: ko
+      value: "\uC5BC\uC74C \uC9C0\uB300"
+    - languageCode: zh
+      value: "\u51B0\u5C01\u5730\u5E26"
+  - key: UGR_DFORCE
+    translations:
+    - languageCode: en
+      value: Drill Force
+    - languageCode: ja
+      value: "\u30C9\u30EA\u30EB\u30D1\u30EF\u30FC"
+    - languageCode: ko
+      value: "\uB4DC\uB9B4 \uC138\uAE30"
+    - languageCode: zh
+      value: "\u94BB\u5934\u529B\u91CF"
+  - key: UGR_DFORTUNE
+    translations:
+    - languageCode: en
+      value: Fortune
+    - languageCode: ja
+      value: "\u5E78\u904B"
+    - languageCode: ko
+      value: "\uD589\uC6B4"
+    - languageCode: zh
+      value: "\u5E78\u8FD0"
+  - key: UGR_DRANGE
+    translations:
+    - languageCode: en
+      value: Drill Range
+    - languageCode: ja
+      value: "\u30C9\u30EA\u30EB\u7BC4\u56F2"
+    - languageCode: ko
+      value: "\uB4DC\uB9B4 \uBC94\uC704"
+    - languageCode: zh
+      value: "\u94BB\u5934\u8303\u56F4"
+  - key: UGR_JFORCE
+    translations:
+    - languageCode: en
+      value: Jetpack Force
+    - languageCode: ja
+      value: "\u30B8\u30A7\u30C3\u30C8\u30D1\u30C3\u30AF\u51FA\u529B"
+    - languageCode: ko
+      value: "\uC81C\uD2B8\uD329 \uC138\uAE30"
+    - languageCode: zh
+      value: "\u55B7\u6C14\u80CC\u5305\u63A8\u529B"
+  - key: UGR_JREGEN
+    translations:
+    - languageCode: en
+      value: Regen Speed
+    - languageCode: ja
+      value: "\u30B8\u30A7\u30C3\u30C8\u30D1\u30C3\u30AF\u56DE\u5FA9\u901F\u5EA6"
+    - languageCode: ko
+      value: "\uC81C\uD2B8\uD329 \uD68C\uBCF5 \uC18D\uB3C4"
+    - languageCode: zh
+      value: "\u55B7\u6C14\u80CC\u5305\u6062\u590D\u901F\u5EA6"
+  - key: UGR_JTOTAL
+    translations:
+    - languageCode: en
+      value: Jetpack Total
+    - languageCode: ja
+      value: "\u30B8\u30A7\u30C3\u30C8\u30D1\u30C3\u30AF\u7DCF\u91CF"
+    - languageCode: ko
+      value: "\uC81C\uD2B8\uD329 \uCD1D\uB7C9"
+    - languageCode: zh
+      value: "\u55B7\u6C14\u80CC\u5305\u603B\u91CF"
+  - key: UGR_PDETECTIONRANGE
+    translations:
+    - languageCode: en
+      value: Ore Detection Range
+    - languageCode: ja
+      value: "\u9271\u77F3\u63A2\u77E5\u7BC4\u56F2"
+    - languageCode: ko
+      value: "\uAD11\uC11D \uD0D0\uC9C0 \uBC94\uC704"
+    - languageCode: zh
+      value: "\u77FF\u77F3\u63A2\u6D4B\u8303\u56F4"
+  - key: UGR_PLIGHTRANGE
+    translations:
+    - languageCode: en
+      value: Light Range
+    - languageCode: ja
+      value: "\u30E9\u30A4\u30C8\u7BC4\u56F2"
+    - languageCode: ko
+      value: "\uB77C\uC774\uD2B8 \uBC94\uC704"
+    - languageCode: zh
+      value: "\u706F\u5149\u8303\u56F4"
+  - key: UGR_PMOVEMENTSPEED
+    translations:
+    - languageCode: en
+      value: Movement Speed
+    - languageCode: ja
+      value: "\u79FB\u52D5\u901F\u5EA6"
+    - languageCode: ko
+      value: "\uC774\uB3D9 \uC18D\uB3C4"
+    - languageCode: zh
+      value: "\u79FB\u52A8\u901F\u5EA6"
+  - key: UGR_SUPERSTARDRILL
+    translations:
+    - languageCode: en
+      value: "\uC288\uD37C \uC2A4\uD0C0 \uB4DC\uB9B4"
+    - languageCode: ja
+      value: "\uC288\uD37C \uC2A4\uD0C0 \uB4DC\uB9B4"
+    - languageCode: ko
+      value: "\uC288\uD37C \uC2A4\uD0C0 \uB4DC\uB9B4"
+    - languageCode: zh
+      value: "\uC288\uD37C \uC2A4\uD0C0 \uB4DC\uB9B4"
+  - key: UI_DEPTH_TO_SURFACE
+    translations:
+    - languageCode: en
+      value: To Surface
+    - languageCode: ja
+      value: "\u5730\u4E0A\u307E\u3067"
+    - languageCode: ko
+      value: "\uC9C0\uC0C1\uAE4C\uC9C0"
+    - languageCode: zh
+      value: "\u81F3\u5730\u8868"
+  - key: UI_LOADING_GREETING
+    translations:
+    - languageCode: en
+      value: On my way...
+    - languageCode: ja
+      value: "\u5411\u304B\u3063\u3066\u3044\u307E\u3059"
+    - languageCode: ko
+      value: "\uAC00\uACE0 \uC788\uC5B4\uC694"
+    - languageCode: zh
+      value: "\u6B63\u5728\u524D\u5F80"
+  - key: UI_LOCK_DRILL_FORCE_REQUIRED
+    translations:
+    - languageCode: en
+      value: Drill Force
+    - languageCode: ja
+      value: "\u30C9\u30EA\u30EB\u30D1\u30EF\u30FC"
+    - languageCode: ko
+      value: "\uB4DC\uB9B4 \uD30C\uC6CC"
+    - languageCode: zh
+      value: "\u94BB\u5934\u529B\u91CF"
+  - key: UI_MAIN_DEV_BUTTON
+    translations:
+    - languageCode: en
+      value: Dev
+    - languageCode: ja
+      value: "\u30B9\u30BF\u30C3\u30D5"
+    - languageCode: ko
+      value: "\uC81C\uC791\uC9C4"
+    - languageCode: zh
+      value: "\u5236\u4F5C\u4EBA\u5458"
+  - key: UI_MAIN_EXIT_BUTTON
+    translations:
+    - languageCode: en
+      value: Exit
+    - languageCode: ja
+      value: "\u7D42\u4E86"
+    - languageCode: ko
+      value: "\uB098\uAC00\uAE30"
+    - languageCode: zh
+      value: "\u9000\u51FA"
+  - key: UI_MAIN_LOAD_BUTTON
+    translations:
+    - languageCode: en
+      value: Continue
+    - languageCode: ja
+      value: "\u3064\u3065\u304D\u304B\u3089"
+    - languageCode: ko
+      value: "\uC774\uC5B4\uD558\uAE30"
+    - languageCode: zh
+      value: "\u7EE7\u7EED\u6E38\u620F"
+  - key: UI_MAIN_START_BUTTON
+    translations:
+    - languageCode: en
+      value: New Game
+    - languageCode: ja
+      value: "\u30B2\u30FC\u30E0\u958B\u59CB"
+    - languageCode: ko
+      value: "\uC0C8 \uAC8C\uC784"
+    - languageCode: zh
+      value: "\u5F00\u59CB\u6E38\u620F"
+  - key: UI_PAUSE_CUSTOMIZE
+    translations:
+    - languageCode: en
+      value: Customize
+    - languageCode: ja
+      value: "\u30AB\u30B9\u30BF\u30DE\u30A4\u30BA"
+    - languageCode: ko
+      value: "\uCEE4\uC2A4\uD130\uB9C8\uC774\uC9D5"
+    - languageCode: zh
+      value: "\u81EA\u5B9A\u4E49"
+  - key: UI_PAUSE_RESUME
+    translations:
+    - languageCode: en
+      value: Resume
+    - languageCode: ja
+      value: "\u518D\u958B"
+    - languageCode: ko
+      value: "\uACC4\uC18D\uD558\uAE30"
+    - languageCode: zh
+      value: "\u7EE7\u7EED"
+  - key: UI_PAUSE_SETTINGS
+    translations:
+    - languageCode: en
+      value: Settings
+    - languageCode: ja
+      value: "\u8A2D\u5B9A"
+    - languageCode: ko
+      value: "\uC124\uC815"
+    - languageCode: zh
+      value: "\u8BBE\u7F6E"
+  - key: UI_PAUSE_TITLE
+    translations:
+    - languageCode: en
+      value: PAUSE
+    - languageCode: ja
+      value: "\u4E00\u6642\u505C\u6B62"
+    - languageCode: ko
+      value: "\uC77C\uC2DC\uC815\uC9C0"
+    - languageCode: zh
+      value: "\u6682\u505C"
+  - key: UI_PAUSE_TO_MAIN
+    translations:
+    - languageCode: en
+      value: To Main
+    - languageCode: ja
+      value: "\u30E1\u30A4\u30F3\u3078"
+    - languageCode: ko
+      value: "\uBA54\uC778\uC73C\uB85C"
+    - languageCode: zh
+      value: "\u8FD4\u56DE\u4E3B\u83DC\u5355"
+  - key: UI_POPUP_BACK_TO_MENU_CONTENT
+    translations:
+    - languageCode: en
+      value: Do you want to return to\nthe main menu?
+    - languageCode: ja
+      value: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC\u306B\u623B\u308A\u307E\u3059\u304B\uFF1F"
+    - languageCode: ko
+      value: "\uBA54\uC778 \uBA54\uB274\uB85C \uC774\uB3D9\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+    - languageCode: zh
+      value: "\u8981\u8FD4\u56DE\u4E3B\u83DC\u5355\u5417\uFF1F"
+  - key: UI_POPUP_BACK_TO_MENU_TITLE
+    translations:
+    - languageCode: en
+      value: BACK TO TITLE
+    - languageCode: ja
+      value: "\u30BF\u30A4\u30C8\u30EB\u3078"
+    - languageCode: ko
+      value: "\uD0C0\uC774\uD2C0\uB85C"
+    - languageCode: zh
+      value: "\u8FD4\u56DE\u6807\u9898"
+  - key: UI_POPUP_BUTTON_NO
+    translations:
+    - languageCode: en
+      value: No
+    - languageCode: ja
+      value: "\u3044\u3044\u3048"
+    - languageCode: ko
+      value: "\uC544\uB2C8\uC624"
+    - languageCode: zh
+      value: "\u5426"
+  - key: UI_POPUP_BUTTON_YES
+    translations:
+    - languageCode: en
+      value: Yes
+    - languageCode: ja
+      value: "\u306F\u3044"
+    - languageCode: ko
+      value: "\uC608"
+    - languageCode: zh
+      value: "\u662F"
+  - key: UI_POPUP_DEMO_CONTENT
+    translations:
+    - languageCode: en
+      value: This concludes the demo. Thank you for playing.
+    - languageCode: ja
+      value: "\u3053\u3053\u307E\u3067\u304C\u30C7\u30E2\u7248\u3068\u306A\u308A\u307E\u3059\u3002\u30D7\u30EC\u30A4\u3057\u3066\u3044\u305F\u3060\u304D\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3057\u305F\u3002"
+    - languageCode: ko
+      value: "\uC9C0\uAE08\uAE4C\uC9C0 \uB370\uBAA8 \uC600\uC2B5\uB2C8\uB2E4. \uD50C\uB808\uC774\uD574\uC8FC\uC154\uC11C
+        \uAC10\uC0AC\uD569\uB2C8\uB2E4."
+    - languageCode: zh
+      value: "\u6F14\u793A\u7248\u5230\u6B64\u7ED3\u675F\u3002\u611F\u8C22\u60A8\u7684\u6E38\u73A9\u3002"
+  - key: UI_POPUP_DEMO_TITLE
+    translations:
+    - languageCode: en
+      value: DEMO
+    - languageCode: ja
+      value: "\u30C7\u30E2"
+    - languageCode: ko
+      value: "\uB370\uBAA8"
+    - languageCode: zh
+      value: "\u6F14\u793A"
+  - key: UI_POPUP_LEVEL_UNLOCK_TIER_2
+    translations:
+    - languageCode: en
+      value: Ready to Explore Level 2!
+    - languageCode: ja
+      value: "\u30EC\u30D9\u30EB2\u3001\u63A2\u7D22\u306E\u6E96\u5099\u5B8C\u4E86\uFF01"
+    - languageCode: ko
+      value: "\uB808\uBCA8 2 \uD0D0\uD5D8 \uC900\uBE44 \uC644\uB8CC!"
+    - languageCode: zh
+      value: "\u7B2C2\u5173\u63A2\u7D22\u51C6\u5907\u5C31\u7EEA\uFF01"
+  - key: UI_POPUP_LEVEL_UNLOCK_TIER_3
+    translations:
+    - languageCode: en
+      value: Ready to Explore Level 3!
+    - languageCode: ja
+      value: "\u30EC\u30D9\u30EB3\u3001\u63A2\u7D22\u306E\u6E96\u5099\u5B8C\u4E86\uFF01"
+    - languageCode: ko
+      value: "\uB808\uBCA8 3 \uD0D0\uD5D8 \uC900\uBE44 \uC644\uB8CC!"
+    - languageCode: zh
+      value: "\u7B2C3\u5173\u63A2\u7D22\u51C6\u5907\u5C31\u7EEA\uFF01"
+  - key: UI_POPUP_NEW_GAME_CONTENT
+    translations:
+    - languageCode: en
+      value: 'Are you sure you want to start a new game?
+
+        Existing data will
+        be lost.'
+    - languageCode: ja
+      value: "\u672C\u5F53\u306B\u65B0\u3057\u3044\u30B2\u30FC\u30E0\u3092\u59CB\u3081\u307E\u3059\u304B\uFF1F\\n\u65E2\u5B58\u306E\u30C7\u30FC\u30BF\u306F\u524A\u9664\u3055\u308C\u307E\u3059\u3002"
+    - languageCode: ko
+      value: "\uC815\uB9D0 \uC0C8 \uAC8C\uC784\uC744 \uC2DC\uC791\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?\\n\uAE30\uC874
+        \uB370\uC774\uD130\uB294 \uC0AD\uC81C\uB429\uB2C8\uB2E4"
+    - languageCode: zh
+      value: "\u786E\u5B9A\u8981\u5F00\u59CB\u65B0\u6E38\u620F\u5417\uFF1F\\n\u73B0\u6709\u6570\u636E\u5C06\u88AB\u5220\u9664\u3002"
+  - key: UI_POPUP_NEW_GAME_TITLE
+    translations:
+    - languageCode: en
+      value: NEW GAME
+    - languageCode: ja
+      value: "\u30CB\u30E5\u30FC\u30B2\u30FC\u30E0"
+    - languageCode: ko
+      value: "\uC0C8 \uAC8C\uC784"
+    - languageCode: zh
+      value: "\u65B0\u6E38\u620F"
+  - key: UI_POPUP_QUIT_CONTENT
+    translations:
+    - languageCode: en
+      value: Are you sure you want to quit?
+    - languageCode: ja
+      value: "\u30B2\u30FC\u30E0\u3092\u7D42\u4E86\u3057\u307E\u3059\u304B\uFF1F"
+    - languageCode: ko
+      value: "\uAC8C\uC784\uC744 \uC885\uB8CC\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+    - languageCode: zh
+      value: "\u786E\u5B9A\u8981\u9000\u51FA\u6E38\u620F\u5417\uFF1F"
+  - key: UI_POPUP_QUIT_TITLE
+    translations:
+    - languageCode: en
+      value: EXIT
+    - languageCode: ja
+      value: "\u7D42\u4E86"
+    - languageCode: ko
+      value: "\uC885\uB8CC"
+    - languageCode: zh
+      value: "\u9000\u51FA"
+  - key: UI_POPUP_SYSTEM_TITLE
+    translations:
+    - languageCode: en
+      value: System
+    - languageCode: ja
+      value: "\u30B7\u30B9\u30C6\u30E0"
+    - languageCode: ko
+      value: "\uC2DC\uC2A4\uD15C"
+    - languageCode: zh
+      value: "\u7CFB\u7EDF"
+  - key: UI_SETTINGS_BGM
+    translations:
+    - languageCode: en
+      value: BGM
+    - languageCode: ja
+      value: BGM
+    - languageCode: ko
+      value: "\uBC30\uACBD\uC74C"
+    - languageCode: zh
+      value: "\u80CC\u666F\u97F3\u4E50"
+  - key: UI_SETTINGS_CAMERASHAKE
+    translations:
+    - languageCode: en
+      value: Camera Shake
+    - languageCode: ja
+      value: "\u753B\u9762\u63FA\u308C"
+    - languageCode: ko
+      value: "\uD654\uBA74 \uD754\uB4E4\uB9BC"
+    - languageCode: zh
+      value: "\u955C\u5934\u6643\u52A8"
+  - key: UI_SETTINGS_FULLSCREEN
+    translations:
+    - languageCode: en
+      value: Full Screen
+    - languageCode: ja
+      value: "\u30D5\u30EB\u30B9\u30AF\u30EA\u30FC\u30F3"
+    - languageCode: ko
+      value: "\uC804\uCCB4 \uD654\uBA74"
+    - languageCode: zh
+      value: "\u5168\u5C4F"
+  - key: UI_SETTINGS_LANGUAGE
+    translations:
+    - languageCode: en
+      value: Language
+    - languageCode: ja
+      value: "\u8A00\u8A9E"
+    - languageCode: ko
+      value: "\uC5B8\uC5B4"
+    - languageCode: zh
+      value: "\u8BED\u8A00"
+  - key: UI_SETTINGS_MASTER
+    translations:
+    - languageCode: en
+      value: Master
+    - languageCode: ja
+      value: "\u30DE\u30B9\u30BF\u30FC\u30DC\u30EA\u30E5\u30FC\u30E0"
+    - languageCode: ko
+      value: "\uC804\uCCB4\uC74C"
+    - languageCode: zh
+      value: "\u4E3B\u97F3\u91CF"
+  - key: UI_SETTINGS_RESET
+    translations:
+    - languageCode: en
+      value: Reset
+    - languageCode: ja
+      value: "\u521D\u671F\u5316"
+    - languageCode: ko
+      value: "\uCD08\uAE30\uD654"
+    - languageCode: zh
+      value: "\u521D\u59CB\u5316"
+  - key: UI_SETTINGS_RESOLUTION
+    translations:
+    - languageCode: en
+      value: Resolution
+    - languageCode: ja
+      value: "\u89E3\u50CF\u5EA6"
+    - languageCode: ko
+      value: "\uD574\uC0C1\uB3C4"
+    - languageCode: zh
+      value: "\u5206\u8FA8\u7387"
+  - key: UI_SETTINGS_SCREEN
+    translations:
+    - languageCode: en
+      value: Window Mode
+    - languageCode: ja
+      value: "\u30A6\u30A3\u30F3\u30C9\u30A6\u30E2\u30FC\u30C9"
+    - languageCode: ko
+      value: "\uCC3D\uBAA8\uB4DC"
+    - languageCode: zh
+      value: "\u7A97\u53E3\u6A21\u5F0F"
+  - key: UI_SETTINGS_SFX
+    translations:
+    - languageCode: en
+      value: SFX
+    - languageCode: ja
+      value: "\u52B9\u679C\u97F3"
+    - languageCode: ko
+      value: "\uD6A8\uACFC\uC74C"
+    - languageCode: zh
+      value: "\u97F3\u6548"
+  - key: UI_SETTINGS_TITLE
+    translations:
+    - languageCode: en
+      value: SETTINGS
+    - languageCode: ja
+      value: "\u8A2D\u5B9A"
+    - languageCode: ko
+      value: "\uC124\uC815"
+    - languageCode: zh
+      value: "\u8BBE\u7F6E"
+  - key: UI_SETTINGS_WINDOWED
+    translations:
+    - languageCode: en
+      value: Window Mode
+    - languageCode: ja
+      value: "\u30A6\u30A3\u30F3\u30C9\u30A6\u30E2\u30FC\u30C9"
+    - languageCode: ko
+      value: "\uCC3D \uBAA8\uB4DC"
+    - languageCode: zh
+      value: "\u7A97\u53E3\u6A21\u5F0F"
+  - key: UI_SETTINGS_WINDOWEDWITHOUTBORDER
+    translations:
+    - languageCode: en
+      value: Borderless Window Mode
+    - languageCode: ja
+      value: "\u30DC\u30FC\u30C0\u30FC\u30EC\u30B9\u30A6\u30A3\u30F3\u30C9\u30A6\u30E2\u30FC\u30C9"
+    - languageCode: ko
+      value: "\uD14C\uB450\uB9AC \uC5C6\uB294 \uCC3D \uBAA8\uB4DC"
+    - languageCode: zh
+      value: "\u65E0\u8FB9\u6846\u7A97\u53E3\u6A21\u5F0F"
+  - key: UI_TELEPORT_EXIT
+    translations:
+    - languageCode: en
+      value: Go Outside
+    - languageCode: ja
+      value: "\u5916\u3078\u51FA\u308B"
+    - languageCode: ko
+      value: "\uBC16\uC73C\uB85C \uB098\uAC00\uAE30"
+    - languageCode: zh
+      value: "\u51FA\u53BB"
+  - key: UI_TUTORIAL_PLAYER_BUBBLE
+    translations:
+    - languageCode: en
+      value: ..?
+    - languageCode: ja
+      value: ..?
+    - languageCode: ko
+      value: ..?
+    - languageCode: zh
+      value: ..?
+  - key: UI_TUTORIAL_SHOP_BUBBLE
+    translations:
+    - languageCode: en
+      value: Help me!
+    - languageCode: ja
+      value: "\u52A9\u3051\u3066\u304F\u3060\u3055\u3044\uFF01"
+    - languageCode: ko
+      value: "\uB3C4\uC640\uC8FC\uC138\uC694!"
+    - languageCode: zh
+      value: "\u5E2E\u5E2E\u6211\uFF01"

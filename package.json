@@ -1,6 +1,6 @@
 {
   "name": "com.borderjung.unity-modules",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "displayName": "Border Unity Modules",
   "description": "Reusable Unity modules by BorderJung, bundled as a single package. Core (build-stripped Log, deterministic RNG), Events (SO event channels), SaveLoad (JSON), Localization (SO table + ILocalizationProvider), Settings (SO-driven settings + ISettingsRepository), and shared UI.",
   "unity": "2021.3",

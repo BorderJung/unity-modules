@@ -11,20 +11,10 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
     public event UnityAction<Vector2> MoveEvent = delegate { };
     public event UnityAction JumpEvent = delegate { };
     public event UnityAction JumpCancelEvent = delegate { };
-    public event UnityAction RunEvent = delegate { };
-    public event UnityAction RunCancelEvent = delegate { };
-    public event UnityAction PullEvent = delegate { };
-    public event UnityAction PullCancelEvent = delegate { };
-    public event UnityAction PushEvent = delegate { };
-    public event UnityAction PushCancelEvent = delegate { };
-    public event UnityAction<Vector2> AimArrowEvent = delegate { };
-    public event UnityAction<Vector2> AimMouseEvent = delegate { };
 
     // Menus
     public event UnityAction MenuPauseEvent = delegate { };
     public event UnityAction MenuCloseEvent = delegate { };
-    public event UnityAction MoveSelectionEvent = delegate { };
-    public event UnityAction MenuMouseMoveEvent = delegate { };
 
     private GameInput _gameInput;
 
@@ -62,36 +52,27 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
 
     public void OnAimArrow(InputAction.CallbackContext context)
     {
-        AimArrowEvent.Invoke(context.ReadValue<Vector2>());
+
     }
-    
+
     public void OnAimMouse(InputAction.CallbackContext context)
     {
-        AimMouseEvent.Invoke(context.ReadValue<Vector2>());
+
     }
-    
+
     public void OnRun(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
-            RunEvent.Invoke();
-        else if (context.phase == InputActionPhase.Canceled)
-            RunCancelEvent.Invoke();
+
     }
 
     public void OnPull(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
-            PullEvent.Invoke();
-        else if (context.phase == InputActionPhase.Canceled)
-            PullCancelEvent.Invoke();
+
     }
 
     public void OnPush(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
-            PushEvent.Invoke();
-        else if (context.phase == InputActionPhase.Canceled)
-            PushCancelEvent.Invoke();
+
     }
 
     public void OnPause(InputAction.CallbackContext context)
@@ -113,14 +94,12 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
 
     public void OnMouseMove(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
-            MenuMouseMoveEvent.Invoke();
+
     }
 
     public void OnMoveSelection(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
-            MoveSelectionEvent.Invoke();
+
     }
 
     public void EnableGameplayInput()

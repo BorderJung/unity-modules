@@ -1,11 +1,13 @@
 {
-    "name": "Border",
-    "rootNamespace": "Border",
+    "name": "Border.Editor",
+    "rootNamespace": "Border.Editor",
     "references": [
-        "Unity.TextMeshPro",
-        "UnityEngine.UI"
+        "Border",
+        "Unity.TextMeshPro"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

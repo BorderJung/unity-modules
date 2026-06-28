@@ -1,7 +1,7 @@
 # unity-modules — Working Guidelines
 
-> A library of reusable Unity modules managed as a **monorepo of embedded UPM packages**.
-> Two goals — (1) battle-tested modules to drop into any project, (2) a portfolio piece demonstrating "design & operation of a reusable module library."
+> A library of reusable Unity modules shipped as **one embedded UPM package** — `com.borderjung.unity-modules`.
+> Two goals — (1) battle-tested modules you drop into any project with a single git URL, (2) a portfolio piece demonstrating "design & operation of a reusable module library."
 > This document is the **single source of truth** for all work (human or agent). Read it before touching code.
 
 ---
@@ -11,60 +11,50 @@
 | Item | Value |
 |---|---|
 | GitHub repo | `https://github.com/BorderJung/unity-modules` |
-| UPM package id prefix | `com.borderjung.*` (lowercase, from gh-id) |
-| Code namespace / asmdef brand | `Border.*` |
+| Distribution | **single UPM package** `com.borderjung.unity-modules` — **repo root = package root** |
+| Install (consumer) | bare git URL, **no `?path=`**: `https://github.com/BorderJung/unity-modules.git#vX.Y.Z` |
+| Code namespace / brand | `Border.*` (PascalCase) |
+| Default assembly | `Border` — single asmdef at `Runtime/Border.asmdef` |
 | Minimum Unity version | `2021.3` (LTS) |
-| Versioning | SemVer + git tag (`v1.0.0`) |
+| Versioning | SemVer + git tag (`vX.Y.Z`), **one tag for the whole package** |
 
-> Package id (`com.borderjung.core`) and code brand (`Border.Core`) are **two different concepts**. The former is UPM reverse-DNS (lowercase); the latter is the asmdef name / rootNamespace (PascalCase). Both are fixed by the rules above.
-
----
-
-## 1. Target Repository Layout
-
-```
-unity-modules/                       # is itself a single Unity project
-├─ Packages/
-│   ├─ com.borderjung.core/          # the one home for shared code
-│   │   ├─ package.json
-│   │   ├─ README.md / CHANGELOG.md / LICENSE.md
-│   │   ├─ Runtime/  Border.Core.asmdef + *.cs
-│   │   ├─ Editor/   Border.Core.Editor.asmdef (if needed)
-│   │   ├─ Tests/    Runtime/ Editor/  (each *.Tests.asmdef)
-│   │   └─ Samples~/                 # trailing ~ → not auto-imported (button only)
-│   ├─ com.borderjung.fsm/
-│   ├─ com.borderjung.input/
-│   ├─ com.borderjung.save-load/
-│   ├─ com.borderjung.scene-management/
-│   └─ com.borderjung.editor-tools/
-├─ Assets/
-│   └─ Demo/                         # scenes that import each module and prove it runs
-├─ ProjectSettings/
-├─ .gitignore                        # Unity template (Library/ Temp/ obj/ …)
-└─ README.md                         # ★ module catalog = the face of the portfolio
-```
-
-Opening the repo immediately verifies every module actually runs in a demo scene, and package development happens right inside it.
+> **History (why single-package):** this started as a multi-package monorepo (`Packages/com.borderjung.*` consumed via `?path=`). It was **consolidated into ONE root package** so consumers import *everything* with a bare git URL — no `?path`, no per-module dependency wiring in their manifest. The old per-module scaffolding is archived under `Dev~/`. **Do not re-split into multiple packages** (§10).
 
 ---
 
-## 2. Module → Package Mapping (current → target)
+## 1. Repository Layout
 
-The repo is not yet a Unity project — only **raw folders + .cs** files. Below is the extraction target.
+```
+unity-modules/                 = the UPM package (repo root)
+├─ package.json                # com.borderjung.unity-modules
+├─ README.md / CHANGELOG.md / LICENSE.md   (+ .meta each)
+├─ CLAUDE.md                   # this file (+ .meta)
+├─ .gitignore
+├─ Runtime/
+│   ├─ Border.asmdef           # single assembly, references: []
+│   ├─ Core/    → namespace Border.Core    (Log, DeterministicRng, ScreenshotManager)
+│   └─ Events/  → namespace Border.Events  (ScriptableObject event channels)
+├─ Editor/                     # only if a module needs editor code (Border.*.Editor asmdef)
+├─ Samples~/                   # optional sample assets (~ = not auto-imported, Package Manager button)
+└─ Dev~/                       # ★ Unity IGNORES ~ folders entirely. Git-tracked staging area:
+    ├─ Packages/               #   old per-module package scaffolding (archived)
+    ├─ Assets/ ProjectSettings/#   old dev-project scaffolding
+    ├─ docs/                   #   drilling-extraction-roadmap.md
+    └─ FSM/ Input/ SaveLoadSystem/ SceneManagement/ EditorTools/   # not-yet-folded modules
+```
 
-| Current location | Package id | asmdef / namespace | Kind | External/internal deps |
-|---|---|---|---|---|
-| `EditorTools/Log.cs` | `com.borderjung.core` | `Border.Core` | **Runtime** | none |
-| `FSM/` | `com.borderjung.fsm` | `Border.StateMachine` (+`.Editor`, `.ScriptableObjects`) | Runtime+Editor | none (UI Toolkit is built-in) |
-| `Input/` | `com.borderjung.input` | `Border.Input` | Runtime | `com.unity.inputsystem` |
-| `SaveLoadSystem/` | `com.borderjung.save-load` | `Border.SaveLoad` | Runtime | **`com.borderjung.core`** (Log) |
-| `SceneManagement/` | `com.borderjung.scene-management` | `Border.SceneManagement` | Runtime | `com.unity.addressables` |
-| `EditorTools/FindMissingScriptsInScene.cs`, `TMPFontChanger.cs` | `com.borderjung.editor-tools` | `Border.EditorTools` | **Editor** | none |
+**Key:** anything under a `~`-suffixed folder (`Dev~/`, `Samples~/`) is committed to git but invisible to Unity. `Dev~/` is the holding pen for modules and assets not yet folded into the package.
 
-### ⚠ Traps to catch during extraction
-- **`Log` lives in the EditorTools folder but is a runtime utility.** `SaveLoadSystem.FileManager` calls it at runtime, gated by `[Conditional("UNITY_EDITOR")]`. → It must NOT live in an editor assembly. Move it to `core`'s **Runtime/**, and make SaveLoad depend on core.
-- **The 4 modules other than FSM have no namespace** (global). Add a `Border.*` namespace while extracting.
-- **FSM's current namespace is `Maggi.StateMachine`.** Per brand unification, rename it to `Border.StateMachine` (+ `.Editor`, `.ScriptableObjects`) wholesale.
+---
+
+## 2. The Single-Assembly Model
+
+- All runtime code compiles into **one assembly `Border`** (`Runtime/Border.asmdef`, `autoReferenced: true`, `references: []`). Consumers just `using Border.Core;` etc. — no manual assembly references.
+- Each **module = a namespace + a folder** under `Runtime/`: `Border.Core` in `Runtime/Core/`, `Border.Events` in `Runtime/Events/`, and so on.
+- A module gets its **own asmdef** (`Border.<Module>`) **only when** it needs:
+  - an **external Unity package** (InputSystem, Addressables, …), or
+  - **editor-only code** → `Border.<Module>.Editor` with `includePlatforms: ["Editor"]`.
+  Otherwise keep it in the single `Border` assembly. Don't create asmdefs you don't need.
 
 ---
 
@@ -72,63 +62,58 @@ The repo is not yet a Unity project — only **raw folders + .cs** files. Below 
 
 | Target | Rule | Example |
 |---|---|---|
-| Package id | `com.borderjung.<module>` (lowercase, kebab-case for multi-word) | `com.borderjung.save-load` |
-| Package folder | same as package id | `Packages/com.borderjung.save-load/` |
-| asmdef name = rootNamespace | `Border.<Module>` (PascalCase) | `Border.SaveLoad` |
-| Editor asmdef | `Border.<Module>.Editor` | `Border.SaveLoad.Editor` |
+| Package id | fixed — `com.borderjung.unity-modules` | — |
+| Module folder | `Runtime/<Module>/` (PascalCase) | `Runtime/SaveLoad/` |
+| Namespace | `Border.<Module>` | `Border.SaveLoad` |
+| Default asmdef | `Border` (everything dependency-free lives here) | `Border` |
+| Per-module asmdef (only if needed) | `Border.<Module>` | `Border.Input` |
+| Editor asmdef | `Border.<Module>.Editor` (`includePlatforms:["Editor"]`) | `Border.SaveLoad.Editor` |
 | Tests asmdef | `Border.<Module>.Tests` (+`.Editor`) | `Border.SaveLoad.Tests` |
-| `displayName` | human-readable name | `Border Save/Load` |
 
 ---
 
-## 4. Standard Package Composition
+## 4. Package Composition
 
-### package.json
+### `package.json` (single, at repo root)
 ```json
 {
-  "name": "com.borderjung.save-load",
+  "name": "com.borderjung.unity-modules",
   "version": "1.0.0",
-  "displayName": "Border Save/Load",
-  "description": "JSON-based save/load system",
+  "displayName": "Border Unity Modules",
+  "description": "Reusable Unity modules by BorderJung, bundled as one package.",
   "unity": "2021.3",
-  "dependencies": {
-    "com.borderjung.core": "1.0.0"
-  },
+  "dependencies": {},
   "author": { "name": "BorderJung", "url": "https://github.com/BorderJung" }
 }
 ```
-- External Unity package deps (InputSystem, Addressables, …) also go in `dependencies`.
-- Inter-module deps go here too → but always read together with the monorepo constraint in **§5**.
+- External Unity deps (InputSystem, Addressables, …) go in `dependencies` — **but read the §5 tradeoff first** (a package-level dep is forced on *every* consumer).
 
-### Runtime asmdef — `Runtime/Border.SaveLoad.asmdef`
+### Default runtime asmdef — `Runtime/Border.asmdef`
 ```json
-{
-  "name": "Border.SaveLoad",
-  "rootNamespace": "Border.SaveLoad",
-  "references": ["Border.Core"],
-  "autoReferenced": true
-}
+{ "name": "Border", "rootNamespace": "Border", "references": [], "autoReferenced": true }
 ```
-> The asmdef `references` field is what **enforces dependencies at compile time**. If a module tries to reference project code, compilation breaks — so "a module does not know the project that consumes it" (one-way dependency) is naturally upheld.
 
-### Editor asmdef — `Editor/Border.SaveLoad.Editor.asmdef`
+### Per-module asmdef (only if it needs deps/editor split) — `Runtime/<Module>/Border.<Module>.asmdef`
 ```json
-{
-  "name": "Border.SaveLoad.Editor",
-  "rootNamespace": "Border.SaveLoad.Editor",
-  "references": ["Border.SaveLoad"],
-  "includePlatforms": ["Editor"]
-}
+{ "name": "Border.Input", "rootNamespace": "Border.Input", "references": ["Border"], "autoReferenced": true }
+```
+> The asmdef `references` field is what **enforces dependencies at compile time**. If a module references project code, compilation breaks — so "a module doesn't know the project that consumes it" (one-way dependency) is upheld.
+
+### Editor asmdef — `Editor/<Module>/Border.<Module>.Editor.asmdef`
+```json
+{ "name": "Border.SaveLoad.Editor", "references": ["Border"], "includePlatforms": ["Editor"] }
 ```
 
 ---
 
-## 5. Dependency Rules (most important)
+## 5. Dependency Rules (the single-package tradeoff)
 
-1. **One-way**: module → module deps flow top-down only. No cycles. Shared code lives in **`core` only**.
-2. **Monorepo constraint**: UPM cannot auto-resolve *internal* package deps inside a Git monorepo. So a consuming project's `manifest.json` must **also list the dependency packages directly** (see §6). → Because of this, keep inter-module deps **minimal** and converge shared code into core.
-3. **External Unity packages**: declare precisely in each `package.json`'s `dependencies` (`com.unity.inputsystem`, `com.unity.addressables`, …).
-4. **Separate editor code**: editor-only code goes in `Editor/` + `includePlatforms:["Editor"]`. Never referenceable from runtime. (Don't repeat the Log-in-EditorTools mistake.)
+1. **Package-level deps hit everyone.** `package.json` `dependencies` are installed for *every* consumer of this package. So a module that needs Addressables would force Addressables onto a project that only wanted `Core`. Keep this in mind before adding any external dep.
+2. **Keep the core lean.** Dependency-free modules (Core, Events, …) live in the `Border` assembly with **no** deps. For a module that needs an external Unity package, prefer one of:
+   - **Optional (preferred):** give the module its own asmdef and gate it with `defineConstraints`/`versionDefines` so it **compiles only when the dep is present**, and do **not** add the dep to `package.json`. Consumers who want that module add the dep themselves.
+   - **Forced (simple):** add the dep to `package.json` so every consumer gets it. Use only for deps you're comfortable forcing on everyone.
+3. **One-way only.** Module → module deps flow top-down, no cycles. Shared code converges into `Border.Core`.
+4. **Editor code stays editor-only.** `Editor/` + `includePlatforms:["Editor"]`. Never referenceable from runtime. (Don't repeat the old "Log living in EditorTools" mistake — runtime utilities belong in `Border.Core`.)
 
 ---
 
@@ -137,89 +122,106 @@ The repo is not yet a Unity project — only **raw folders + .cs** files. Below 
 ```json
 {
   "dependencies": {
-    "com.borderjung.core":      "https://github.com/BorderJung/unity-modules.git?path=Packages/com.borderjung.core#v1.0.0",
-    "com.borderjung.save-load": "https://github.com/BorderJung/unity-modules.git?path=Packages/com.borderjung.save-load#v1.0.0"
+    "com.borderjung.unity-modules": "https://github.com/BorderJung/unity-modules.git#v1.0.0"
   }
 }
 ```
-- `?path=` → import only a specific package inside the monorepo.
-- `#v1.0.0` → pin a version by git tag. **Without a tag you always pull the latest main and builds become unstable.**
-- save-load depends on core, so **list core too** (§5 constraint).
+- **Bare URL, no `?path=`** — the repo root *is* the package.
+- `#vX.Y.Z` pins by git tag. **Without a tag you pull the latest `main` and builds drift.**
+- **One entry** — the package bundles every module, so there are no internal deps to list.
+- **Local development:** point at the working copy with a `file:` path (mutable — see §8B). Remember to switch back to the git URL + tag before relying on a build.
 
 ---
 
 ## 7. Versioning / Releases
 
-- **SemVer**: breaking → MAJOR / feature → MINOR / bugfix → PATCH.
-- Release: bump `version` in `package.json` → update CHANGELOG → `git tag v1.1.0 && git push --tags`.
-- Being a monorepo, **one tag is shared by all packages**. If per-module independent releases become necessary, split then with prefixed tags like `save-load/v1.1.0` — **do not over-split from the start**.
+- **SemVer**: breaking → MAJOR / new module or feature → MINOR / bugfix → PATCH.
+- Release: bump `version` in `package.json` → update `CHANGELOG.md` → `git tag vX.Y.Z && git push --tags`.
+- **One package, one tag.** All modules ship together.
 
 ---
 
-## 8. Module Extraction Procedure (one at a time, least-dependent first)
+## 8. Folding a New Module Into the Package
 
-> Recommended order: **core → editor-tools / input / scene-management → save-load (after core, since it depends on core) → fsm**.
+Two entry paths. **8A** is the usual case (you already have working code + assets + metas in another Unity project). **8B** covers brand-new code authored directly here.
 
-For each module:
-1. (If the original project is separate) attach a **temporary asmdef** to the target code and build → references that break are "dependencies leaking from the project."
-2. **Invert** those deps via interfaces/events to cut them (the module depends on an abstraction, not a concrete class).
-3. Move code into `Packages/com.borderjung.<module>/` + clean up the **`Border.*` namespace** + create package.json/asmdef skeletons.
-4. **Verify it runs in a demo scene (`Assets/Demo/`)** → on pass, `git tag` to release.
-5. Delete the code from the original project and re-import via `manifest.json` → **confirm no regression**.
+### 8A. Importing from another Unity project — *bring the `.meta` files!*
 
-**Finish verifying one module before the next.** If something breaks, the blast radius is small. Never move everything at once.
+> The golden rule: **copy every asset together with its sibling `.meta`, and never regenerate a meta you already have.** A `.meta` carries the asset's **GUID**; bringing it preserves every cross-reference. Regenerating = new GUID = broken references.
 
-### Per-module extraction checklist
-- [ ] `package.json` written (name/version/unity/dependencies/author)
-- [ ] Runtime asmdef + (if needed) Editor asmdef, correct `references`
-- [ ] `Border.<Module>` namespace on all .cs
-- [ ] all external/internal deps declared in `dependencies`
-- [ ] a working scene in `Assets/Demo/` + compile & play verified
-- [ ] README.md / CHANGELOG.md (per module)
-- [ ] git tag, then manifest.json import regression check
+1. **Copy `.cs`/asset + its `.meta` together.** Why it matters: a ScriptableObject `.asset` points at its script via the *script's* GUID; a prefab points at scripts/sub-assets by GUID; an asmdef references another asmdef by `GUID:…`. Bring the metas and all of these stay intact across the move.
+2. **Place + namespace.** Move into `Runtime/<Module>/`; rename the namespace to `Border.<Module>` (a code edit — does **not** touch GUIDs/metas). Strip any source-project namespace (e.g. the old FSM `Maggi.*`, or global/no-namespace).
+3. **Cut the coupling.** Delete references to the source project: asmdef `references` that point at the game's assemblies, `using` of game-specific types. Re-point to `Border` (for `Log` etc.) or to declared external Unity assemblies. Invert remaining couplings via interfaces/events. Replace `Debug.Log` with `Border.Core` `Log.D/W/E`.
+4. **asmdef decision** (see §2):
+   - Source module had its own asmdef **and** needs separate compilation (external dep / editor split) → **keep** it (asmdef + its `.meta`), rename to `Border.<Module>`, fix `references`.
+   - Otherwise → **delete** the source asmdef + its `.meta` so the code folds into the single `Border` assembly. First make sure no other asmdef referenced its GUID.
+5. **Asset placement.** Editor UI assets (`.uxml`/`.uss`) → `Editor/<Module>/` under the editor asmdef. Sample/preset `.asset`/prefabs → `Samples~/<Module>/` (not auto-imported). Everything **with its `.meta`**.
+6. **Declare deps / version / docs.** External Unity deps per §5. Bump `package.json` version (MINOR), update `CHANGELOG.md` and the README module list.
+7. **Sanity: GUID uniqueness.** Astronomically unlikely to collide, but a quick scan for duplicate `guid:` across the package's metas is cheap insurance.
+8. **Commit (with the metas), push, tag** `vX.Y.0`.
+
+### 8B. Authoring new code directly here (no metas yet)
+
+Root-package code is **not** auto-meta'd by opening this repo in Unity — Unity only manages `Assets/` and `Packages/`, not arbitrary root folders. To get metas:
+- **Recommended — `file:` workflow.** In a Unity project (e.g. a scratch project or EmptyHouse), reference this package by a local path:
+  ```json
+  "com.borderjung.unity-modules": "file:C:/Users/jungs/00_LocalRepo/04_unity-modules"
+  ```
+  A `file:` package is **mutable**, so Unity generates/maintains `.meta` files in the repo folder and you can edit code live. Commit the generated metas, then switch consumers back to the git URL + tag.
+- **Fallback — hand-generate.** Write each `.meta` with a unique 32-hex GUID and **no BOM** (folders → `folderAsset: yes` + `DefaultImporter`; `.cs` → `MonoImporter`; `.asmdef` → `AssemblyDefinitionImporter`; `package.json` → `PackageManifestImporter`; text → `TextScriptImporter`).
+
+### Per-module checklist
+- [ ] code under `Runtime/<Module>/`, namespace `Border.<Module>`
+- [ ] every file has its `.meta` (brought over, or generated)
+- [ ] coupling to the source project cut (asmdef refs, usings, `Debug.Log`→`Log`)
+- [ ] asmdef decision made (folded into `Border`, or own asmdef for deps/editor)
+- [ ] external deps handled per §5 (optional vs forced)
+- [ ] `package.json` version bump + `CHANGELOG.md` + README updated
+- [ ] commit + push + `git tag vX.Y.Z` + import regression check in a consumer
 
 ---
 
-## 9. Code Conventions (observed in the repo)
+## 9. Code Conventions
 
 - **Namespace required**: all runtime/editor code under `Border.<Module>`. No global namespace.
-- **Logging**: use `Border.Core`'s `Log.D/W/E` instead of calling `UnityEngine.Debug.Log` directly. Being `[Conditional("UNITY_EDITOR")]`, it is stripped from builds automatically.
-- **Prefer ScriptableObject-based design** (like FSM and SceneManagement) — split data/config into assets.
+- **Logging**: use `Border.Core`'s `Log.D/W/E` instead of `UnityEngine.Debug.Log`. Being `[Conditional("UNITY_EDITOR")]`, it is stripped from builds automatically.
+- **Prefer ScriptableObject-based design** (like Events) — split data/config into assets.
 - **Editor code under `Editor/`** + an Editor-only asmdef. Never mix with runtime code.
+- **Always commit `.meta` files.** A package without metas has its scripts/asmdefs silently ignored on import.
 
 ---
 
 ## 10. Do / Don't
 
 **Do**
-- Extract one module at a time → verify in a demo → tag. Keep it narrow.
-- Converge shared code into `core`.
-- In each package/module README, write one paragraph on "which project it was extracted from, **why**, and what problem it solved" → accumulates as interview talking points.
+- Fold **one module at a time** → verify it compiles in a consumer → tag. Keep the blast radius small.
+- **Bring `.meta` files** when importing from another project (preserves GUIDs).
+- Converge shared code into `Border.Core`; keep the core dependency-free.
+- In the README, note for each module "which project it came from, **why**, and what problem it solved" → interview talking points.
 
 **Don't**
-- Overuse inter-module deps (especially cycles). Avoid lateral deps outside core.
-- Consume main without a tag. Builds drift.
-- Put runtime code in an Editor assembly (the Log case).
-- Extract several modules at once.
+- **Re-split into multiple packages.** We consolidated on purpose; bare-URL import is the whole point.
+- **Regenerate metas you already have** — it changes GUIDs and breaks references.
+- Force heavy external deps on all consumers without weighing §5.
+- Put runtime code in an Editor assembly. Consume `main` without a tag.
 
 ---
 
 ## 11. Status & Next Actions
 
-**Source project for extraction**: the game "Drilling" at `C:/Users/jungs/LocalRepo/00_Drilling/Drilling/Assets` (Unity 6000.3.12f1). A 97-agent audit produced the verified packaging plan in [docs/drilling-extraction-roadmap.md](docs/drilling-extraction-roadmap.md) — ~16 candidate packages, dependency-ordered, with per-package decoupling notes. **Read the roadmap before extracting anything new.**
+**Source project for extraction**: the game "Drilling" at `C:/Users/jungs/LocalRepo/00_Drilling/Drilling/Assets` (Unity 6000.3.12f1). A 97-agent audit produced the packaging plan in [Dev~/docs/drilling-extraction-roadmap.md](Dev~/docs/drilling-extraction-roadmap.md) — dependency-ordered, with per-module decoupling notes. **Read it before folding anything new.** (Note: the roadmap was written for the *old* multi-package plan — translate its "package" units into *modules* under `Runtime/<Module>/` in the single-package model.)
 
 **Confirmed decisions (2026-06-15)**
-- `DescriptionSO` → all SOs reparented to plain `ScriptableObject` (no shared base type across packages).
-- DOTween → `core` and Tier-0 infra stay dependency-free; DOTween allowed only in presentation utilities (fade/blink/floating/track), declared per-package.
-- Granularity → separate small packages (events / runtime-anchor / pool standalone).
-- Start order → `core` → `events` → … down the roadmap order.
+- `DescriptionSO` → all SOs reparented to plain `ScriptableObject` (no shared base type).
+- DOTween → `Core` and Tier-0 infra stay dependency-free; DOTween allowed only in presentation utilities (fade/blink/floating/track), gated per §5.
+- Granularity → small, self-contained modules (events / runtime-anchor / pool independent), all inside the one package.
 
 **Done**
-- Repo scaffolded as a Unity project: `.gitignore`, `ProjectSettings/ProjectVersion.txt` (6000.3.12f1), `Packages/manifest.json`, `Assets/Demo/`, root `README.md` catalog.
-- `com.borderjung.core` v1.0.0 — `Log`, `DeterministicRng`, `ScreenshotManager`.
-- `com.borderjung.events` v1.0.0 — Void/Bool/Int/Float/Vector2/String channels (plain `ScriptableObject`, `Border/Events/*` menu).
+- **Consolidated into a single root package `com.borderjung.unity-modules` v1.0.0** — repo root is the package, `Runtime/Core` + `Runtime/Events` under the single `Border` assembly, all `.meta` committed, non-package material moved to `Dev~/`.
+- Imports via **bare git URL** (`…unity-modules.git`), verified working in the EmptyHouse project.
+- `Border.Core` — `Log`, `DeterministicRng`, `ScreenshotManager`. `Border.Events` — Void/Bool/Int/Float/Vector2/String channels + Fade/FloatingHud.
 
 **Next actions**
-1. Open the repo in Unity once to generate metas/Library and verify `core` + `events` compile; add demo scenes in `Assets/Demo/` (Core determinism, Events publisher/subscriber). Then `git tag v1.0.0`.
-2. Continue down the roadmap: `runtime-anchor`, `pool` (both depend only on core).
-3. The still-loose root folders (FSM/Input/SaveLoadSystem/SceneManagement/EditorTools) are pre-package staging — fold into packages per the roadmap (the project's save-load supersedes; FocusManager/DualSense extend input).
+1. `git tag v1.0.0 && git push --tags` to pin the current working state, then switch consumers to `#v1.0.0`.
+2. Fold the next module from `Dev~/` (or directly from the Drilling project) per **§8A** — bring the metas, place under `Runtime/<Module>/`, decide asmdef, bump to v1.1.0.
+3. Still-loose staging in `Dev~/` (FSM/Input/SaveLoadSystem/SceneManagement/EditorTools) awaits folding (the project's save-load supersedes the old one; FocusManager/DualSense extend input).

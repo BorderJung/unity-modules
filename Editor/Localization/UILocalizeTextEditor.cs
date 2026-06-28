@@ -11,7 +11,7 @@ namespace Border.Localization.Editor
     /// </summary>
     [CustomEditor(typeof(UILocalizeText))]
     [CanEditMultipleObjects]
-    public class UILocalizeTextEditor : Editor
+    public class UILocalizeTextEditor : UnityEditor.Editor
     {
         private SerializedProperty usePrefixProperty;
         private SerializedProperty prefixKeyProperty;

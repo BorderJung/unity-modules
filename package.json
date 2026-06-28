@@ -8,5 +8,12 @@
   "dependencies": {
     "com.unity.ugui": "1.0.0"
   },
+  "samples": [
+    {
+      "displayName": "Settings & Localization Demo",
+      "description": "Example SettingsSO, LocalizationTable, event-channel instances (wired to Border.Events), and Settings panel prefabs.",
+      "path": "Samples~/SettingsAndLocalization"
+    }
+  ],
   "author": { "name": "BorderJung", "url": "https://github.com/BorderJung" }
 }

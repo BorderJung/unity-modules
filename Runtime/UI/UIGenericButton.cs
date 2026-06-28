@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Border.Core;
+using Border.Localization;
 
 namespace Border.UI
 {

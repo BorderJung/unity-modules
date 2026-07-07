@@ -3,6 +3,11 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.4.4] - 2026-07-08
+
+### Fixed
+- `InputReader` 컴파일 에러 수정.
+
 ## [1.4.3] - 2026-07-08
 
 ### Changed

@@ -17,9 +17,8 @@ namespace Border.Input
             {
                 _gameInput = new GameInput();
 
-                _gameInput.Gameplay.SetCallbacks(this);
-                _gameInput.Menus.SetCallbacks(this);
-                _gameInput.Gameplay.Enable();
+                // _gameInput.##.SetCallbacks(this);
+                // _gameInput.##.Enable();
             }
         }
 

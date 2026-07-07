@@ -7,17 +7,8 @@ using UnityEngine.UIElements;
 namespace Border.Input
 {
     [CreateAssetMenu(fileName = "InputReader", menuName = "Game/Input Reader")]
-    public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInput.IMenusActions
+    public class InputReader : ScriptableObject
     {
-        // GamePlay
-        public event UnityAction<Vector2> MoveEvent = delegate { };
-        public event UnityAction JumpEvent = delegate { };
-        public event UnityAction JumpCancelEvent = delegate { };
-
-        // Menus
-        public event UnityAction MenuPauseEvent = delegate { };
-        public event UnityAction MenuCloseEvent = delegate { };
-
         private GameInput _gameInput;
 
         private void OnEnable()
@@ -37,6 +28,12 @@ namespace Border.Input
             DisableAllInput();
         }
 
+        public void DisableAllInput()
+        {
+            _gameInput.Gameplay.Disable();
+            _gameInput.Menus.Disable();
+        }
+
         /* Menus Actions */
 
         public void OnMovement(InputAction.CallbackContext context)
@@ -50,31 +47,6 @@ namespace Border.Input
                 JumpEvent.Invoke();
             else if (context.phase == InputActionPhase.Canceled)
                 JumpCancelEvent.Invoke();
-        }
-
-        public void OnAimArrow(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnAimMouse(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnRun(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnPull(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnPush(InputAction.CallbackContext context)
-        {
-
         }
 
         public void OnPause(InputAction.CallbackContext context)
@@ -93,71 +65,5 @@ namespace Border.Input
                 MenuCloseEvent.Invoke();
             }
         }
-
-        public void OnMouseMove(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnMoveSelection(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void EnableGameplayInput()
-        {
-            _gameInput.Menus.Disable();
-            _gameInput.Gameplay.Enable();
-        }
-
-        public void DisableGameplayInput()
-        {
-            _gameInput.Gameplay.Disable();
-        }
-
-        public void EnableMenuInput()
-        {
-            _gameInput.Gameplay.Disable();
-            _gameInput.Menus.Enable();
-        }
-
-        public void DisableAllInput()
-        {
-            _gameInput.Gameplay.Disable();
-            _gameInput.Menus.Disable();
-        }
-
-        public bool GetGameplayInput()
-        {
-            return _gameInput.Gameplay.enabled;
-        }
-
-        public bool LeftMouseDown() => Mouse.current.leftButton.isPressed;
-
-        public void OnPoint(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnClick(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnRightClick(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnNavigate(InputAction.CallbackContext context)
-        {
-
-        }
-
-        public void OnSubmit(InputAction.CallbackContext context)
-        {
-
-        }
     }
-
 }

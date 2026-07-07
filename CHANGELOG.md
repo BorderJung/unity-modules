@@ -3,6 +3,11 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.3.2] - 2026-07-07
+
+### Changed
+- 샘플을 폴더별 독립 3개 항목으로 노출 — `Localization` / `Settings` / `UI` 각각 Package Manager에서 개별 Import. (래퍼 폴더 제거, `Samples~` 루트 단일 경로 대신 3개 `path`)
+
 ## [1.3.1] - 2026-07-07
 
 ### Changed

@@ -29,6 +29,21 @@ https://github.com/BorderJung/unity-modules.git
 > 버전을 고정하려면 끝에 git 태그를 붙입니다: `...unity-modules.git#v1.0.0`
 > 태그 없이 받으면 항상 `main` 최신을 가져오므로 빌드가 흔들릴 수 있습니다.
 
+## 소비 방식 두 가지
+
+| 방식 | 위치 | 편집 | 업데이트 | 용도 |
+|---|---|---|---|---|
+| **A. UPM git URL** (위 방법) | `Packages/` (읽기전용) | ✗ | git 태그로 재해석 | 그대로 재사용, 버전 고정 |
+| **B. `.unitypackage` import** | `Assets/Border/` | ✓ | 없음(프로젝트 fork) | **출발점**으로 가져와 자유롭게 수정 |
+
+### B. `.unitypackage`로 Assets/에 가져오기 (편집용)
+
+`Assets → Import Package → Custom Package…` → `Border-Modules.unitypackage` 선택 → **Import**.
+→ `Assets/Border/{Runtime, Editor, Demo}`에 스크립트·프리팹·SO가 **편집 가능한 상태**로 들어옵니다(GUID 보존 → 프리팹/SO 연결 유지). 이후엔 프로젝트 소유 코드로 자유롭게 수정하세요.
+
+- 배포물은 GitHub Release(태그)에 첨부합니다.
+- 재생성: `python Dev~/Tools/make-unitypackage.py Dev~/dist/Border-Modules.unitypackage` (Runtime/Editor/Plugins~ 소스를 `Assets/Border/...` 경로로 패키징).
+
 ## 포함된 모듈
 
 | 영역 | 네임스페이스 | 내용 |

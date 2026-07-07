@@ -3,6 +3,15 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.3.0] - 2026-07-07
+
+### Added
+- **UI** (`Border.UI`): 재사용 UI 보조 컴포넌트 2종 — `UISelectionFrameHook`(EventSystem Select/Deselect로 9-slice 선택 프레임 토글), `SelectableExtraGraphics`(Selectable 색상 트랜지션을 보조 Graphic에 동기화). Drilling에서 편입, 게임 결합 없음.
+- **Samples**: `Settings & Localization Demo`에 UI/Settings/Localization 프리팹 편입 — `GenericButton`, `LocalizeText`, `LocalizeManager`, `Frame`, `Settings Panel`, `SettingsBool`, `SettingDropdown`, `SettingSlider`, `SettingsSystem`. 이벤트 채널/`SettingsSO`/`LocalizationTable` 참조는 asset GUID 보존으로 샘플 SO에 그대로 연결됨.
+
+### Changed
+- 샘플 프리팹에서 게임 종속 요소 제거: 사운드 훅(`UISelectableSoundHook`) 컴포넌트 스트립, 게임 폰트(Mulmaru)→`LiberationSans SDF`, 게임 스프라이트(13종)→builtin `UISprite`, 폐기 참조(HUD 채널/게임 SaveLoadSystem)→null. 컴파일·컴포넌트 결합 0.
+
 ## [1.2.0] - 2026-07-07
 
 ### Added

@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSettings: {fileID: 11400000, guid: afb071e636615ad43bfe6703ebbf124e, type: 2}
-  saveLoadSystem: {fileID: 11400000, guid: c1f9269de328cc344ba2b4fa23b1c9cd, type: 2}
+  saveLoadSystem: {fileID: 0}
   saveSettingsEvent: {fileID: 11400000, guid: 394039fd7fe57e748a0a8473c3365b80, type: 2}
   changeMasterVolumeEvent: {fileID: 11400000, guid: aca400c6086a8bd448c8dc0a987fdd56, type: 2}
   changeMusicVolumeEvent: {fileID: 11400000, guid: 3f4c913e679e4df4fb3a030f4d69e50f, type: 2}
   changeSfxVolumeEvent: {fileID: 11400000, guid: 8aedceb493701d44d9fe99b1261a43cf, type: 2}
   changeResolutionEvent: {fileID: 11400000, guid: dbd1fddcac7e7194d94c7e0e20f446b2, type: 2}
-  changeHudOnEvent: {fileID: 11400000, guid: 7e7a575cdc9c94b4e99615b43cabb56e, type: 2}
+  changeHudOnEvent: {fileID: 0}
   changeCameraShakeEvent: {fileID: 11400000, guid: f92f1f812ab1d64479f08b11c1c04f5c, type: 2}
   changeLanguageEvent: {fileID: 11400000, guid: 95d27532552ec754d93b7952a7ec1b4d, type: 2}

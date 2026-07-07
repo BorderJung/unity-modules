@@ -34,11 +34,11 @@ https://github.com/BorderJung/unity-modules.git
 | 영역 | 네임스페이스 | 내용 |
 |---|---|---|
 | Core | `Border.Core` | 빌드에서 자동 제거되는 조건부 `Log`, 결정론적 xorshift32 RNG(`DeterministicRng`), 스크린샷 헬퍼(`ScreenshotManager`) |
-| Events | `Border.Events` | ScriptableObject 이벤트 채널 (Void/Bool/Int/Float/Vector2/String) + Fade/FloatingHud 채널. 인스펙터에서 연결하는 옵저버 패턴 |
+| Events | `Border.Events` | ScriptableObject 이벤트 채널 (Void/Bool/Int/Float/Vector2/String) + Fade 채널. 인스펙터에서 연결하는 옵저버 패턴 |
 | SaveLoad | `Border.SaveLoad` | JSON 저장/로드 (`SaveLoadSystem`, `FileManager`, `Save`) |
 | Localization | `Border.Localization` | SO 테이블 + `LocalizationManager`(`ILocalizationProvider`, 정적 `Current`), `UILocalizeText`, `[LocalizeKey]` 에디터 |
 | Settings | `Border.Settings` | SO 기반 설정(`SettingsSystem`/`SettingsSO`) + `ISettingsRepository` 주입, 그래픽/오디오 UI |
-| UI | `Border.UI` | `UIGenericButton` 등 공용 UI |
+| UI | `Border.UI` | `UIGenericButton`, 선택 프레임 토글(`UISelectionFrameHook`), 보조 그래픽 색상 동기화(`SelectableExtraGraphics`) 등 공용 UI. 데모 프리팹은 Samples에 포함 |
 | Input | `Border.Input` | Input System 콜백 → `UnityAction` 이벤트 브리지(`InputReader`). 전용 asmdef + `com.unity.inputsystem` 게이팅. ⚠️ `.inputactions`에서 생성되는 `GameInput` 필요 |
 
 런타임 코드는 단일 어셈블리 `Border`, 에디터 코드는 `Border.Editor`로 컴파일됩니다.

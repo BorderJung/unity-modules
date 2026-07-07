@@ -146,8 +146,10 @@ A consumer's manifest entry has two modes — switch that **one line** between t
 1. Need to change the package → switch the consumer to **Dev (`file:`)** and iterate.
 2. All changes done → **bump `version`, update `CHANGELOG`, commit, `git tag vX.Y.Z`, push** (tags too).
 3. **Immediately bump the consumer to the new release** — this is standing policy, do it every release without being asked:
+   - **Do this with Unity CLOSED.** A running Editor rewrites `manifest.json`/`packages-lock.json` back to its in-memory resolved version, silently **rolling back your edit** (observed: edited to `#vX.Y.Z`, Unity reverted both files to the previous tag). Edit while closed, then launch.
    - In `EmptyHouse/Packages/manifest.json`, swap the one line to `…unity-modules.git#vX.Y.Z` (the just-pushed tag).
-   - In `EmptyHouse/Packages/packages-lock.json`, **delete the whole `com.borderjung.unity-modules` block** (it pins the previous commit hash). Unity re-resolves the new tag on window focus; leaving the stale lock keeps the old commit (§12.3, §12.8).
+   - In `EmptyHouse/Packages/packages-lock.json`, **delete the whole `com.borderjung.unity-modules` block** (it pins the previous commit hash). Unity re-resolves the new tag on launch; leaving the stale lock keeps the old commit (§12.3, §12.8).
+   - If Unity still serves the old version, delete the stale cache `EmptyHouse/Library/PackageCache/com.borderjung.unity-modules@<oldhash>` (Unity must be closed — the folder is locked while it runs), then launch.
    - Consumer path: `C:/Users/jungs/00_LocalRepo/01_EmptyHouse/EmptyHouse`.
 
 Never commit/share a consuming project while it's in Dev mode — `file:` only resolves on your machine.

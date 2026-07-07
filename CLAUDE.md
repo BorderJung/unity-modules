@@ -145,7 +145,10 @@ A consumer's manifest entry has two modes — switch that **one line** between t
 **Rule (follow this every time):**
 1. Need to change the package → switch the consumer to **Dev (`file:`)** and iterate.
 2. All changes done → **bump `version`, update `CHANGELOG`, commit, `git tag vX.Y.Z`, push** (tags too).
-3. Switch the consumer **back to Release (`#vX.Y.Z`)**.
+3. **Immediately bump the consumer to the new release** — this is standing policy, do it every release without being asked:
+   - In `EmptyHouse/Packages/manifest.json`, swap the one line to `…unity-modules.git#vX.Y.Z` (the just-pushed tag).
+   - In `EmptyHouse/Packages/packages-lock.json`, **delete the whole `com.borderjung.unity-modules` block** (it pins the previous commit hash). Unity re-resolves the new tag on window focus; leaving the stale lock keeps the old commit (§12.3, §12.8).
+   - Consumer path: `C:/Users/jungs/00_LocalRepo/01_EmptyHouse/EmptyHouse`.
 
 Never commit/share a consuming project while it's in Dev mode — `file:` only resolves on your machine.
 

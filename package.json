@@ -10,7 +10,7 @@
   },
   "samples": [
     {
-      "displayName": "Demo (Localization + Settings + UI)",
+      "displayName": "Modules",
       "description": "Localization/Settings/UI 데모 프리팹·SO·이벤트 채널을 한 번에 임포트. 폰트=LiberationSans SDF, 스프라이트=Unity 기본으로 치환됨.",
       "path": "Plugins~/borderjung"
     }

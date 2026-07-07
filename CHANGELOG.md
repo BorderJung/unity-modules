@@ -3,6 +3,14 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.4.0] - 2026-07-07
+
+### Added
+- **Input** (`Border.Input`): 생성 클래스 `GameInput`을 편입해 모듈이 실제 컴파일·동작. Drilling의 `GameInput.cs`를 `namespace Border.Input`으로 감싸 전역 `GameInput` 충돌 회피(소비 프로젝트가 자체 `GameInput`을 가져도 무방). 이제 `com.unity.inputsystem` 설치 프로젝트에서 `Border.Input`이 정상 컴파일된다.
+
+### Fixed
+- `Border.Input` 미컴파일로 프로젝트 전체 컴파일이 실패하던 문제 해소 → 임포트한 샘플 프리팹의 스크립트 연결(“missing script”)도 함께 정상화.
+
 ## [1.3.2] - 2026-07-07
 
 ### Changed

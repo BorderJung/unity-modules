@@ -39,13 +39,10 @@ https://github.com/BorderJung/unity-modules.git
 | Localization | `Border.Localization` | SO 테이블 + `LocalizationManager`(`ILocalizationProvider`, 정적 `Current`), `UILocalizeText`, `[LocalizeKey]` 에디터 |
 | Settings | `Border.Settings` | SO 기반 설정(`SettingsSystem`/`SettingsSO`) + `ISettingsRepository` 주입, 그래픽/오디오 UI |
 | UI | `Border.UI` | `UIGenericButton`, 선택 프레임 토글(`UISelectionFrameHook`), 보조 그래픽 색상 동기화(`SelectableExtraGraphics`) 등 공용 UI. 데모 프리팹은 Samples에 포함 |
-| Input | `Border.Input` | Input System 콜백 → `UnityAction` 이벤트 브리지(`InputReader`). 전용 asmdef + `com.unity.inputsystem` 게이팅. ⚠️ `.inputactions`에서 생성되는 `GameInput` 필요 |
+| Input | `Border.Input` | Input System 콜백 → `UnityAction` 이벤트 브리지(`InputReader`) + 생성 클래스 `GameInput`(namespace `Border.Input`). 전용 asmdef + `com.unity.inputsystem` 게이팅 |
 
 런타임 코드는 단일 어셈블리 `Border`, 에디터 코드는 `Border.Editor`로 컴파일됩니다.
 `using Border.Core;` / `using Border.Events;` / `using Border.Settings;` 등으로 접근합니다.
-
-> **편입 대기**: `Input`(`InputReader`)은 `.inputactions`에서 생성되는 `GameInput` 클래스가
-> 함께 수집되지 않아 아직 패키지에 포함되지 않았습니다 (`Dev~/Input`에 보관).
 
 ## 사용 예
 

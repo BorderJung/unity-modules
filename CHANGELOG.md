@@ -3,6 +3,11 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.4.2] - 2026-07-08
+
+### Changed
+- 샘플을 통합 단일 항목으로 되돌림 — `path`를 `Plugins~/borderjung`로 두어 Localization/Settings/UI를 **Import 한 번에** 가져오도록. (교차 참조되는 `Frame.prefab` 포함 안전)
+
 ## [1.4.1] - 2026-07-07
 
 ### Changed

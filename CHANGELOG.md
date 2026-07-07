@@ -3,6 +3,11 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.4.1] - 2026-07-07
+
+### Changed
+- 샘플 에셋 위치를 `Samples~/{Localization,Settings,UI}` → `Plugins~/borderjung/{Localization,Settings,UI}`로 이동, `package.json` samples `path` 갱신. (동작 동일 — Package Manager Import 버튼으로 개별 임포트)
+
 ## [1.4.0] - 2026-07-07
 
 ### Added

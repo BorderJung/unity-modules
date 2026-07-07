@@ -8,6 +8,8 @@
 
 ## 0. Core Decisions (update this table first if any change)
 
+> **★ MODEL CHANGE (v2.0.0) — Import 전용 소스 딜리버리.** 이 패키지는 이제 `Packages/`에서 바로 컴파일되는 라이브러리가 **아니다.** 모든 소스(스크립트+asmdef+데모)가 `Plugins~/borderjung/{Runtime,Editor,Demo}` 안에 있어 패키지 상태에선 컴파일되지 않고, **Package Manager Samples → Import** 로 `Assets/`에 복사되어야 컴파일·편집된다. 이유: 스크립트를 패키지에서도 컴파일하면 Import한 Assets 사본과 `Border` 어셈블리가 이중 정의되어 충돌하므로, 소스는 샘플에만 둔다(단일 정의). 따라서 아래 표의 "Default assembly at `Runtime/Border.asmdef`"·"bare git URL 즉시 사용" 항목은 **소스가 `Plugins~/borderjung/Runtime/`로 이동**했고 **사용 = Import** 로 바뀐 것으로 읽는다. 업데이트 시 이전 버전 Import 폴더를 지워 이중 정의를 피한다.
+
 | Item | Value |
 |---|---|
 | GitHub repo | `https://github.com/BorderJung/unity-modules` |

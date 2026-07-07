@@ -1,48 +1,32 @@
 # Border Unity Modules
 
-`com.borderjung.unity-modules` — BorderJung의 재사용 Unity 모듈을 **하나의 UPM 패키지**로 묶은 것.
-git URL 한 줄로 어떤 프로젝트에든 바로 드롭인할 수 있게 만든 라이브러리입니다.
+`com.borderjung.unity-modules` — BorderJung의 재사용 Unity 모듈을 **소스 딜리버리 패키지**로 묶은 것.
+git URL로 추가한 뒤 **Package Manager의 Samples에서 Import** 하면, 전체 소스(스크립트 + 프리팹 + SO)가 `Assets/`로 복사되어 **편집 가능**해집니다.
 
 - **Package id**: `com.borderjung.unity-modules`
-- **Assembly / root namespace**: `Border`
+- **Namespace**: `Border.*` / **Assembly**: `Border`, `Border.Editor`, `Border.Input`
 - **Min Unity**: 2021.3
 - **외부 의존성**: `com.unity.ugui` (TextMeshPro/UGUI) — Localization/Settings/UI가 사용
 
-## 설치 (Package Manager git URL)
+> **모델 (v2.0.0~): Import 전용.** 이 패키지는 `Packages/`에서 바로 컴파일되는 라이브러리가 **아닙니다.** 모든 소스는 `Plugins~/borderjung/` 안에 있어 패키지 상태에선 컴파일되지 않고, **Samples Import를 통해 `Assets/`로 복사되어야** 컴파일·사용됩니다. (그래야 같은 어셈블리가 두 번 정의되는 충돌 없이 편집 가능)
 
-Unity → Window → Package Manager → **+** → *Add package from git URL…* 에 아래를 입력:
+## 설치 & Import
+
+**1) 패키지 추가** — Unity → Window → Package Manager → **+** → *Add package from git URL…*:
 
 ```
-https://github.com/BorderJung/unity-modules.git
+https://github.com/BorderJung/unity-modules.git#v2.0.0
 ```
 
-또는 프로젝트의 `Packages/manifest.json`에 직접:
+**2) Import** — Package Manager에서 **Border Unity Modules** 선택 → **Samples** 탭 → **Border Modules (full source)** 의 **Import** 클릭.
 
-```json
-{
-  "dependencies": {
-    "com.borderjung.unity-modules": "https://github.com/BorderJung/unity-modules.git"
-  }
-}
-```
+→ `Assets/Samples/Border Unity Modules/<버전>/Border Modules (full source)/{Runtime, Editor, Demo}` 에 전체 소스가 **편집 가능**하게 들어옵니다 (GUID 보존 → 프리팹/SO 연결 유지). 이후엔 프로젝트 소유 코드로 자유롭게 수정하세요.
 
-> 버전을 고정하려면 끝에 git 태그를 붙입니다: `...unity-modules.git#v1.0.0`
-> 태그 없이 받으면 항상 `main` 최신을 가져오므로 빌드가 흔들릴 수 있습니다.
+### 업데이트 (버전 올릴 때)
 
-## 소비 방식 두 가지
-
-| 방식 | 위치 | 편집 | 업데이트 | 용도 |
-|---|---|---|---|---|
-| **A. UPM git URL** (위 방법) | `Packages/` (읽기전용) | ✗ | git 태그로 재해석 | 그대로 재사용, 버전 고정 |
-| **B. `.unitypackage` import** | `Assets/Border/` | ✓ | 없음(프로젝트 fork) | **출발점**으로 가져와 자유롭게 수정 |
-
-### B. `.unitypackage`로 Assets/에 가져오기 (편집용)
-
-`Assets → Import Package → Custom Package…` → `Border-Modules.unitypackage` 선택 → **Import**.
-→ `Assets/Border/{Runtime, Editor, Demo}`에 스크립트·프리팹·SO가 **편집 가능한 상태**로 들어옵니다(GUID 보존 → 프리팹/SO 연결 유지). 이후엔 프로젝트 소유 코드로 자유롭게 수정하세요.
-
-- 배포물은 GitHub Release(태그)에 첨부합니다.
-- 재생성: `python Dev~/Tools/make-unitypackage.py Dev~/dist/Border-Modules.unitypackage` (Runtime/Editor/Plugins~ 소스를 `Assets/Border/...` 경로로 패키징).
+1. `Packages/manifest.json`의 URL 태그를 새 버전으로 (`#vX.Y.Z`) 바꾼다.
+2. Package Manager → Samples → **다시 Import**.
+3. ⚠️ **이전 버전 Import 폴더(`Assets/Samples/.../<옛버전>/`)를 삭제**한다. 안 지우면 같은 `Border` 어셈블리가 두 번 존재해 컴파일 충돌이 난다.
 
 ## 포함된 모듈
 

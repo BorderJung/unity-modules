@@ -3,6 +3,15 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [2.0.0] - 2026-07-08
+
+### Changed (BREAKING)
+- **소비 모델을 "Import 전용 소스 딜리버리"로 전환.** 모든 소스(Runtime/Editor 스크립트+asmdef, Demo 프리팹·SO)를 `Plugins~/borderjung/{Runtime,Editor,Demo}` 아래로 이동 — 패키지 상태에선 컴파일되지 않는다. Package Manager **Samples → Import** 로 `Assets/`에 복사해야 컴파일·편집 가능.
+  - 이유: 스크립트가 패키지에서 컴파일되면 Import한 Assets 사본과 같은 `Border` 어셈블리가 이중 정의되어 충돌. 소스를 샘플에만 두어 단일 정의 보장.
+  - **BREAKING**: 더 이상 `Packages/`에서 바로 쓰는 컴파일 라이브러리가 아니다. 기존 git-URL 드롭인 소비자는 Import 방식으로 전환해야 한다.
+  - 업데이트 시 이전 버전 Import 폴더를 삭제해야 어셈블리 이중 정의를 피한다.
+- 제거: `.unitypackage` 생성기(`Dev~/Tools`) — Samples Import로 대체.
+
 ## [1.4.4] - 2026-07-08
 
 ### Fixed

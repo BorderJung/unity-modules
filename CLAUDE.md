@@ -161,6 +161,7 @@ Never commit/share a consuming project while it's in Dev mode — `file:` only r
 - **SemVer**: breaking → MAJOR / new module or feature → MINOR / bugfix → PATCH.
 - Release: bump `version` in `package.json` → update `CHANGELOG.md` → `git tag vX.Y.Z && git push --tags`.
 - **One package, one tag.** All modules ship together.
+- **커밋 메시지 규칙 — `Co-Authored-By` 등 Claude/AI 서명 트레일러를 절대 넣지 않는다.** `Co-Authored-By: Claude ...`, `Generated with Claude Code` 류의 문장 금지. 커밋 메시지는 변경 내용만 담는다.
 
 ---
 

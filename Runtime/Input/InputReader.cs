@@ -30,40 +30,7 @@ namespace Border.Input
 
         public void DisableAllInput()
         {
-            _gameInput.Gameplay.Disable();
-            _gameInput.Menus.Disable();
-        }
-
-        /* Menus Actions */
-
-        public void OnMovement(InputAction.CallbackContext context)
-        {
-            MoveEvent.Invoke(context.ReadValue<Vector2>());
-        }
-
-        public void OnJump(InputAction.CallbackContext context)
-        {
-            if (context.phase == InputActionPhase.Performed)
-                JumpEvent.Invoke();
-            else if (context.phase == InputActionPhase.Canceled)
-                JumpCancelEvent.Invoke();
-        }
-
-        public void OnPause(InputAction.CallbackContext context)
-        {
-            if (context.phase == InputActionPhase.Performed)
-                MenuPauseEvent.Invoke();
-        }
-
-
-        /* Menus Actions */
-
-        public void OnCancel(InputAction.CallbackContext context)
-        {
-            if (context.phase == InputActionPhase.Performed)
-            {
-                MenuCloseEvent.Invoke();
-            }
+            // _gameInput.##.Disable();
         }
     }
 }

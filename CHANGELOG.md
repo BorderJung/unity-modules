@@ -3,6 +3,11 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [1.3.1] - 2026-07-07
+
+### Changed
+- 샘플 폴더 재구조화: `Samples~/SettingsAndLocalization/` 래퍼 제거 → `Samples~/{Localization,Settings,UI}` 최상위. `package.json` samples `path`를 `Samples~`로 조정해 통합 1개 데모로 Import(교차 참조되는 `Frame.prefab` 포함 안전).
+
 ## [1.3.0] - 2026-07-07
 
 ### Added

@@ -39,6 +39,8 @@ https://github.com/BorderJung/unity-modules.git#v2.0.0
 | Settings | `Border.Settings` | SO 기반 설정(`SettingsSystem`/`SettingsSO`) + `ISettingsRepository` 주입, 그래픽/오디오 UI |
 | UI | `Border.UI` | `UIGenericButton`, 선택 프레임 토글(`UISelectionFrameHook`), 보조 그래픽 색상 동기화(`SelectableExtraGraphics`) 등 공용 UI. 데모 프리팹은 Samples에 포함 |
 | Input | `Border.Input` | Input System 콜백 → `UnityAction` 이벤트 브리지(`InputReader`) + 생성 클래스 `GameInput`(namespace `Border.Input`). 전용 asmdef + `com.unity.inputsystem` 게이팅 |
+| Pool | `Border.Pool` | 제네릭 오브젝트 풀 프레임워크 — `IPool<T>`/`IFactory<T>`, `FactorySO<T>`, `PoolSO<T>`, `ComponentPoolSO<T>`, 씬 언로드 자동 정리 `PoolRegistry` |
+| Audio | `Border.Audio` | SO/이벤트채널 기반 오디오 재생 틀 — `AudioManager`(풀에서 `SoundEmitter` 재생 + `AudioMixer` 볼륨), 재생 채널 `AudioCueEventChannelSO`, `AudioCueSO`/`AudioConfigurationSO`, `AudioRegistrySO`(AudioId 조회). 매핑 데이터 미포함 |
 
 런타임 코드는 단일 어셈블리 `Border`, 에디터 코드는 `Border.Editor`로 컴파일됩니다.
 `using Border.Core;` / `using Border.Events;` / `using Border.Settings;` 등으로 접근합니다.

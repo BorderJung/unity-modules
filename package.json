@@ -1,6 +1,6 @@
 {
   "name": "com.borderjung.unity-modules",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "displayName": "Border Unity Modules",
   "description": "BorderJung의 재사용 Unity 모듈 소스 딜리버리 패키지. Package Manager의 Samples에서 Import하면 전체 소스(스크립트 + 프리팹 + SO)가 Assets/로 복사되어 편집 가능해진다. Core/Events/SaveLoad/Localization/Settings/UI(+옵션 Input).",
   "unity": "2021.3",

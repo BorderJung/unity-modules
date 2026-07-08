@@ -3,6 +3,14 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [2.1.0] - 2026-07-08
+
+### Added
+- **Pool** (`Border.Pool`): 제네릭 오브젝트 풀 프레임워크 — `IPool<T>`/`IFactory<T>`, `FactorySO<T>`, `PoolSO<T>`, `ComponentPoolSO<T>`, 씬 언로드 시 자동 정리하는 `PoolRegistry`. Drilling에서 편입, `DescriptionSO`→`ScriptableObject`로 디커플.
+- **Audio** (`Border.Audio`): SO/이벤트채널 기반 오디오 재생 틀 — `AudioManager`(풀에서 `SoundEmitter`를 꺼내 SFX/BGM 재생, `AudioMixer` 볼륨 제어를 `Border.Events`의 `FloatEventChannelSO`로 연동), 재생 채널 `AudioCueEventChannelSO`, `AudioCueSO`/`AudioConfigurationSO`/`AudioCueKey`, `SoundEmitter`/`SoundEmitterVault`, `SoundEmitterPoolSO`/`SoundEmitterFactorySO`(Border.Pool 기반), `AudioRegistrySO`(AudioId→Cue/Config 조회).
+  - **매핑 데이터 제거**: `AudioId` enum을 게임 값 45개 → 최소 예시(`None`/`Sfx_Sample`/`Bgm_Sample`)로 축소, Drilling의 AudioRegistry/Configuration/Cue `.asset` 데이터는 미포함(프레임워크만).
+  - low-pass/reverb 블렌드("cave acoustics")는 게임 결합 없는 순수 Unity 필터 로직이라 그대로 유지.
+
 ## [2.0.0] - 2026-07-08
 
 ### Changed (BREAKING)

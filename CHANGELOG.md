@@ -3,6 +3,14 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [2.1.1] - 2026-07-08
+
+### Added
+- **Audio 데모** (`Demo/Audio`): 동작하는 오디오 체인 — `AudioManager.prefab`(풀·레지스트리·재생채널 연결, 볼륨은 Settings 데모의 `Change*VolumeEventChannel`에 연결), 빈 `AudioRegistry.asset`, `Sfx/MusicAudioCueEventChannel.asset`, `SoundEmitter.prefab`(+AudioSource), `SoundEmitterFactory`/`SoundEmitterPool.asset`, 예시 `AudioConfiguration.asset`.
+
+### Fixed
+- `AudioCueEventChannel.cs` → `AudioCueEventChannelSO.cs` 파일명을 클래스명과 일치시킴 (SO 인스턴스 생성 가능하도록). GUID 보존.
+
 ## [2.1.0] - 2026-07-08
 
 ### Added

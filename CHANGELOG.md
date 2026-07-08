@@ -3,6 +3,11 @@
 All notable changes to `com.borderjung.unity-modules` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [SemVer](https://semver.org/).
 
+## [2.1.2] - 2026-07-09
+
+### Fixed
+- `Border.Pool`의 `FactorySO.cs`에 `using UnityEngine;`가 누락되어 `ScriptableObject`를 찾지 못하던 컴파일 에러(CS0246) 수정. 단일 `Border` 어셈블리에 속하므로 이 한 파일이 어셈블리 전체 컴파일을 깨뜨려, Import 후 오디오를 포함한 모든 프리팹 스크립트가 "missing"으로 보이던 증상의 원인이었음.
+
 ## [2.1.1] - 2026-07-08
 
 ### Added
